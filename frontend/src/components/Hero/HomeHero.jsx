@@ -96,10 +96,10 @@ const ParticleField = ({ count = 200 }) => {
         />
       </bufferGeometry>
       <pointsMaterial
-        size={0.05}
-        color="#06B6D4"
+        size={0.06}
+        color="#00F5FF"
         transparent
-        opacity={0.6}
+        opacity={0.8}
         sizeAttenuation
       />
     </points>
@@ -110,7 +110,7 @@ const ParticleField = ({ count = 200 }) => {
 const BackgroundSphere = () => {
   return (
     <Sphere args={[30, 64, 64]} position={[0, 0, -20]}>
-      <meshBasicMaterial color="#0F172A" side={THREE.BackSide} />
+      <meshBasicMaterial color="#0A0A0F" side={THREE.BackSide} />
     </Sphere>
   );
 };
@@ -119,19 +119,22 @@ const BackgroundSphere = () => {
 const HomeHeroScene = () => {
   return (
     <>
-      <ambientLight intensity={0.4} />
-      <directionalLight position={[10, 10, 5]} intensity={1} color="#FFFFFF" />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#06B6D4" />
-      <pointLight position={[10, 10, 10]} intensity={0.5} color="#3B82F6" />
+      <ambientLight intensity={0.3} />
+      <directionalLight position={[10, 10, 5]} intensity={0.8} color="#FFFFFF" />
+      <pointLight position={[-10, -10, -10]} intensity={0.8} color="#00F5FF" />
+      <pointLight position={[10, 10, 10]} intensity={0.6} color="#A855F7" />
+      <pointLight position={[0, 5, 5]} intensity={0.4} color="#00FF88" />
       
-      <ParticleField count={300} />
+      <ParticleField count={400} />
       
-      <FloatingSphere position={[3, 0, 0]} color="#1E3A8A" scale={1.5} speed={0.8} />
-      <FloatingSphere position={[-2.5, 1.5, -2]} color="#06B6D4" scale={0.8} speed={1.2} />
-      <FloatingSphere position={[-3, -1.5, 1]} color="#3B82F6" scale={0.6} speed={1} />
+      <FloatingSphere position={[3.5, 0.5, 0]} color="#0A1628" scale={1.8} speed={0.6} />
+      <FloatingSphere position={[-2.5, 1.5, -2]} color="#00F5FF" scale={0.9} speed={1.2} />
+      <FloatingSphere position={[-3.5, -1.5, 1]} color="#A855F7" scale={0.7} speed={1} />
+      <FloatingSphere position={[1, -2, -1]} color="#00D4FF" scale={0.5} speed={1.4} />
       
-      <AnimatedTorus position={[0, -2, -3]} color="#1E3A8A" scale={0.7} />
-      <AnimatedTorus position={[2, 2, -4]} color="#06B6D4" scale={0.5} />
+      <AnimatedTorus position={[0, -2.5, -3]} color="#00F5FF" scale={0.8} />
+      <AnimatedTorus position={[2.5, 2, -4]} color="#A855F7" scale={0.5} />
+      <AnimatedTorus position={[-1, 0, -5]} color="#00FF88" scale={0.4} />
     </>
   );
 };

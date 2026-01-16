@@ -1,40 +1,49 @@
-// D Mac - Corporate Color Theme
-// Based on blue/white logo with accent colors
+// D Mac - Futuristic High-Tech Theme
+// Neon accents, cyber aesthetic, dark mode focused
 
 export const theme = {
   colors: {
-    // Primary colors (from logo)
-    primary: '#1E3A8A',      // Deep corporate blue
-    primaryLight: '#3B82F6', // Lighter blue for hovers
-    primaryDark: '#1E2756',  // Darker blue for depth
+    // Primary colors - Deep cyber blue
+    primary: '#0A1628',       // Deep space blue
+    primaryLight: '#1E3A5F',  // Lighter blue for cards
+    primaryDark: '#050D18',   // Almost black
+    
+    // Neon accent colors
+    neonCyan: '#00F5FF',      // Primary neon cyan
+    neonBlue: '#00D4FF',      // Electric blue
+    neonPurple: '#A855F7',    // Neon purple
+    neonPink: '#F472B6',      // Neon pink accent
+    neonGreen: '#00FF88',     // Matrix green
     
     // Neutral colors
     white: '#FFFFFF',
-    offWhite: '#F8FAFC',
-    lightGray: '#E2E8F0',
-    mediumGray: '#94A3B8',
-    darkGray: '#475569',
+    offWhite: '#E2E8F0',
+    lightGray: '#94A3B8',
+    mediumGray: '#64748B',
+    darkGray: '#334155',
     charcoal: '#1E293B',
-    black: '#0F172A',
+    black: '#0A0A0F',
     
     // Accent colors
-    accent: '#06B6D4',       // Cyan accent for CTAs
-    accentHover: '#0891B2',  // Darker cyan for hover states
-    accentLight: '#67E8F9',  // Light cyan for highlights
+    accent: '#00F5FF',        // Primary cyan accent
+    accentHover: '#00D4FF',   // Hover state
+    accentLight: '#67E8F9',   // Light cyan for highlights
     
-    // Secondary accent
-    gold: '#F59E0B',         // Gold for premium highlights
-    goldLight: '#FCD34D',
+    // Glow colors (with alpha)
+    glowCyan: 'rgba(0, 245, 255, 0.5)',
+    glowBlue: 'rgba(0, 212, 255, 0.4)',
+    glowPurple: 'rgba(168, 85, 247, 0.4)',
     
     // Functional colors
-    success: '#10B981',
-    error: '#EF4444',
-    warning: '#F59E0B',
+    success: '#00FF88',
+    error: '#FF3366',
+    warning: '#FFB800',
   },
   
   fonts: {
     heading: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
     body: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    mono: "'JetBrains Mono', 'Fira Code', monospace",
   },
   
   fontSizes: {
@@ -78,6 +87,10 @@ export const theme = {
     md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
     lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
     xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+    neonCyan: '0 0 20px rgba(0, 245, 255, 0.5), 0 0 40px rgba(0, 245, 255, 0.3)',
+    neonBlue: '0 0 20px rgba(0, 212, 255, 0.5), 0 0 40px rgba(0, 212, 255, 0.3)',
+    neonPurple: '0 0 20px rgba(168, 85, 247, 0.5), 0 0 40px rgba(168, 85, 247, 0.3)',
+  },
     '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
     inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
   },

@@ -30,11 +30,13 @@ const NetworkGraph = ({ position = [0, 0, 0] }) => {
         <Float key={i} speed={2 + i * 0.3} rotationIntensity={0.2} floatIntensity={0.3}>
           <Sphere args={[node.scale, 32, 32]} position={node.pos}>
             <MeshDistortMaterial
-              color={i === 0 ? '#1E3A8A' : '#06B6D4'}
+              color={i === 0 ? '#00F5FF' : '#A855F7'}
               distort={0.2}
               speed={2}
               roughness={0.2}
               metalness={0.8}
+              emissive={i === 0 ? '#00F5FF' : '#A855F7'}
+              emissiveIntensity={0.2}
             />
           </Sphere>
         </Float>
@@ -60,11 +62,13 @@ const NetworkGraph = ({ position = [0, 0, 0] }) => {
           >
             <cylinderGeometry args={[0.02, 0.02, length, 8]} />
             <meshStandardMaterial
-              color="#3B82F6"
+              color="#00D4FF"
               transparent
-              opacity={0.6}
+              opacity={0.7}
               metalness={0.5}
               roughness={0.3}
+              emissive="#00D4FF"
+              emissiveIntensity={0.3}
             />
           </mesh>
         );
@@ -89,7 +93,7 @@ const VideoIcon = ({ position = [0, 0, 0] }) => {
       {/* Film Reel */}
       <group ref={reelRef} position={[-0.8, 0.8, 0]}>
         <Torus args={[0.4, 0.08, 16, 48]}>
-          <meshStandardMaterial color="#1E3A8A" metalness={0.8} roughness={0.2} />
+          <meshStandardMaterial color="#A855F7" metalness={0.8} roughness={0.2} emissive="#A855F7" emissiveIntensity={0.2} />
         </Torus>
         {/* Reel holes */}
         {[0, 60, 120, 180, 240, 300].map((angle, i) => {
@@ -100,7 +104,7 @@ const VideoIcon = ({ position = [0, 0, 0] }) => {
               args={[0.06, 16, 16]}
               position={[Math.cos(rad) * 0.25, Math.sin(rad) * 0.25, 0]}
             >
-              <meshStandardMaterial color="#06B6D4" metalness={0.7} roughness={0.3} />
+              <meshStandardMaterial color="#00F5FF" metalness={0.7} roughness={0.3} emissive="#00F5FF" emissiveIntensity={0.3} />
             </Sphere>
           );
         })}
@@ -109,15 +113,15 @@ const VideoIcon = ({ position = [0, 0, 0] }) => {
       {/* Screen/Player */}
       <Float speed={1.5} rotationIntensity={0.1} floatIntensity={0.3}>
         <RoundedBox args={[2, 1.4, 0.15]} radius={0.08} smoothness={4} position={[0, -0.2, 0]}>
-          <meshStandardMaterial color="#0F172A" metalness={0.3} roughness={0.7} />
+          <meshStandardMaterial color="#0A0A0F" metalness={0.3} roughness={0.7} />
         </RoundedBox>
         
         {/* Screen glow */}
         <RoundedBox args={[1.8, 1.2, 0.05]} radius={0.05} smoothness={4} position={[0, -0.2, 0.1]}>
           <meshStandardMaterial
-            color="#1E3A8A"
-            emissive="#1E3A8A"
-            emissiveIntensity={0.3}
+            color="#0F1419"
+            emissive="#A855F7"
+            emissiveIntensity={0.2}
             metalness={0.1}
             roughness={0.9}
           />
@@ -127,8 +131,8 @@ const VideoIcon = ({ position = [0, 0, 0] }) => {
         <mesh position={[0, -0.2, 0.15]}>
           <coneGeometry args={[0.25, 0.4, 3]} />
           <meshStandardMaterial
-            color="#06B6D4"
-            emissive="#06B6D4"
+            color="#00F5FF"
+            emissive="#00F5FF"
             emissiveIntensity={0.5}
             metalness={0.5}
             roughness={0.3}
@@ -155,12 +159,12 @@ const GeometricElements = () => {
       <group ref={group1Ref}>
         <Float speed={1} rotationIntensity={0.5} floatIntensity={0.5}>
           <Box args={[0.4, 0.4, 0.4]} position={[4, 2, -3]}>
-            <meshStandardMaterial color="#1E3A8A" metalness={0.7} roughness={0.3} wireframe />
+            <meshStandardMaterial color="#00F5FF" metalness={0.7} roughness={0.3} wireframe />
           </Box>
         </Float>
         <Float speed={1.5} rotationIntensity={0.3} floatIntensity={0.8}>
           <Torus args={[0.3, 0.1, 16, 32]} position={[-4, -1, -2]}>
-            <meshStandardMaterial color="#06B6D4" metalness={0.8} roughness={0.2} />
+            <meshStandardMaterial color="#A855F7" metalness={0.8} roughness={0.2} emissive="#A855F7" emissiveIntensity={0.2} />
           </Torus>
         </Float>
       </group>
@@ -168,12 +172,12 @@ const GeometricElements = () => {
       <group ref={group2Ref}>
         <Float speed={2} rotationIntensity={0.4} floatIntensity={0.6}>
           <Sphere args={[0.2, 32, 32]} position={[3, -2, -4]}>
-            <meshStandardMaterial color="#3B82F6" metalness={0.9} roughness={0.1} />
+            <meshStandardMaterial color="#00FF88" metalness={0.9} roughness={0.1} emissive="#00FF88" emissiveIntensity={0.3} />
           </Sphere>
         </Float>
         <Float speed={1.2} rotationIntensity={0.6} floatIntensity={0.4}>
           <Box args={[0.3, 0.3, 0.3]} position={[-3, 2, -5]} rotation={[0.5, 0.5, 0]}>
-            <meshStandardMaterial color="#06B6D4" metalness={0.6} roughness={0.4} />
+            <meshStandardMaterial color="#F472B6" metalness={0.6} roughness={0.4} emissive="#F472B6" emissiveIntensity={0.2} />
           </Box>
         </Float>
       </group>
@@ -185,10 +189,11 @@ const GeometricElements = () => {
 const ServicesHeroScene = () => {
   return (
     <>
-      <ambientLight intensity={0.3} />
-      <directionalLight position={[10, 10, 5]} intensity={1.2} color="#FFFFFF" />
-      <pointLight position={[-5, 5, 5]} intensity={0.8} color="#06B6D4" />
-      <pointLight position={[5, -5, 5]} intensity={0.6} color="#1E3A8A" />
+      <ambientLight intensity={0.2} />
+      <directionalLight position={[10, 10, 5]} intensity={0.8} color="#FFFFFF" />
+      <pointLight position={[-5, 5, 5]} intensity={1} color="#00F5FF" />
+      <pointLight position={[5, -5, 5]} intensity={0.8} color="#A855F7" />
+      <pointLight position={[0, 0, 8]} intensity={0.4} color="#00FF88" />
       
       <NetworkGraph position={[-2.5, 0, 0]} />
       <VideoIcon position={[2.5, 0, 0]} />
