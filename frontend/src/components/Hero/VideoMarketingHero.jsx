@@ -134,6 +134,67 @@ const VideoElements = () => {
   );
 };
 
+// Particle field (copied from HomeHero for star-like background)
+const ParticleField = ({ count = 400 }) => {
+  const meshRef = useRef();
+  
+  const particles = useMemo(() => {
+    const temp = [];
+    for (let i = 0; i < count; i++) {
+      const x = (Math.random() - 0.5) * 20;
+      const y = (Math.random() - 0.5) * 20;
+      const z = (Math.random() - 0.5) * 20;
+      temp.push({ x, y, z });
+    }
+    return temp;
+  }, [count]);
+  
+  const positions = useMemo(() => {
+    const pos = new Float32Array(count * 3);
+    particles.forEach((p, i) => {
+      pos[i * 3] = p.x;
+      pos[i * 3 + 1] = p.y;
+      pos[i * 3 + 2] = p.z;
+    });
+    return pos;
+  }, [particles, count]);
+
+  useFrame((state) => {
+    const time = state.clock.getElapsedTime();
+    meshRef.current.rotation.y = time * 0.05;
+    meshRef.current.rotation.x = time * 0.03;
+  });
+
+  return (
+    <points ref={meshRef}>
+      <bufferGeometry>
+        <bufferAttribute
+          attach="attributes-position"
+          count={positions.length / 3}
+          array={positions}
+          itemSize={3}
+        />
+      </bufferGeometry>
+      <pointsMaterial
+        size={0.06}
+        color="#00F5FF"
+        transparent
+        opacity={0.8}
+        sizeAttenuation
+      />
+    </points>
+  );
+};
+
+// Gradient Background Sphere (for depth)
+const BackgroundSphere = () => {
+  return (
+    <Sphere args={[30, 64, 64]} position={[0, 0, -20]}>
+      <meshBasicMaterial color="#0A0A0F" side={THREE.BackSide} />
+    </Sphere>
+  );
+};
+
 // Video Marketing Hero Scene
 const VideoMarketingHeroScene = () => {
   return (
@@ -144,6 +205,9 @@ const VideoMarketingHeroScene = () => {
       <pointLight position={[5, -5, 5]} intensity={0.8} color="#A855F7" />
       <pointLight position={[0, 0, 8]} intensity={0.4} color="#00FF88" />
       
+      <ParticleField count={400} />
+      <BackgroundSphere />
+
       <FilmReel position={[-2.5, 0, 0]} />
       <CameraLens position={[2.5, 0, 0]} />
       <VideoElements />

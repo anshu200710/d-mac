@@ -1,6 +1,7 @@
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, Torus, Box, Sphere, RoundedBox, OrbitControls } from '@react-three/drei';
+import * as THREE from 'three';
 
 // Megaphone-ish shape (simplified)
 const Megaphone = ({ position = [0, 0, 0] }) => {
@@ -140,6 +141,58 @@ const TrendLine = ({ position = [0, 0, 0] }) => {
   );
 };
 
+// Particle field (copied from HomeHero for star-like background)
+const ParticleField = ({ count = 400 }) => {
+  const meshRef = useRef();
+  
+  const particles = useMemo(() => {
+    const temp = [];
+    for (let i = 0; i < count; i++) {
+      const x = (Math.random() - 0.5) * 20;
+      const y = (Math.random() - 0.5) * 20;
+      const z = (Math.random() - 0.5) * 20;
+      temp.push({ x, y, z });
+    }
+    return temp;
+  }, [count]);
+  
+  const positions = useMemo(() => {
+    const pos = new Float32Array(count * 3);
+    particles.forEach((p, i) => {
+      pos[i * 3] = p.x;
+      pos[i * 3 + 1] = p.y;
+      pos[i * 3 + 2] = p.z;
+    });
+    return pos;
+  }, [particles, count]);
+
+  useFrame((state) => {
+    const time = state.clock.getElapsedTime();
+    meshRef.current.rotation.y = time * 0.05;
+    meshRef.current.rotation.x = time * 0.03;
+  });
+
+  return (
+    <points ref={meshRef}>
+      <bufferGeometry>
+        <bufferAttribute
+          attach="attributes-position"
+          count={positions.length / 3}
+          array={positions}
+          itemSize={3}
+        />
+      </bufferGeometry>
+      <pointsMaterial
+        size={0.06}
+        color="#00F5FF"
+        transparent
+        opacity={0.8}
+        sizeAttenuation
+      />
+    </points>
+  );
+};
+
 const DigitalMarketingScene = () => {
   return (
     <>
@@ -147,6 +200,9 @@ const DigitalMarketingScene = () => {
       <directionalLight position={[10, 10, 5]} intensity={0.8} color="#FFFFFF" />
       <pointLight position={[0, 5, 5]} intensity={0.8} color="#00F5FF" />
       <pointLight position={[5, -5, 5]} intensity={0.6} color="#A855F7" />
+
+      {/* star-like particle field */}
+      <ParticleField count={400} />
 
       <Megaphone position={[-3.2, 0.9, -1.6]} />
       <AnalyticsBars position={[1.8, -1.2, -1.4]} />

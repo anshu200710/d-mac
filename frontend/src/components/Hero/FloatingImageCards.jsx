@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import styles from './FloatingImageCards.module.css';
 
-const FloatingImageCards = () => {
+const FloatingImageCards = ({ cardsData, sectionTitle = 'Our Video Marketing Services' }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
-  const cards = [
+  const defaultCards = [
     {
       id: 1,
       title: 'Ad Videos',
@@ -47,9 +47,11 @@ const FloatingImageCards = () => {
     }
   ];
 
+  const cards = cardsData ?? defaultCards;
+
   return (
     <div className={styles.container}>
-      <h2 className={styles.sectionTitle}>Our Video Marketing Services</h2>
+      <h2 className={styles.sectionTitle}>{sectionTitle}</h2>
       
       <div className={styles.cardsGrid}>
         {cards.map((card) => (
