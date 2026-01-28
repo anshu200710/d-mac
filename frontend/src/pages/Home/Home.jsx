@@ -22,25 +22,27 @@ const Home = () => {
   const services = [
     {
       icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <circle cx="12" cy="12" r="10"/>
           <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
         </svg>
       ),
       title: 'Digital Marketing',
-      description: 'Strategic digital marketing solutions that drive measurable results and accelerate your business growth.',
-      features: ['SEO & SEM Optimization', 'Social Media Management', 'Content Strategy', 'Analytics & Reporting']
+      tagline: 'Data-driven growth across channels',
+      route: '/digital-marketing',
+      accent: '#00F5FF'
     },
     {
       icon: (
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <polygon points="23 7 16 12 23 17 23 7"/>
           <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
         </svg>
       ),
       title: 'Video Marketing',
-      description: 'Compelling video content that captivates your audience and tells your brand story with impact.',
-      features: ['Brand Videos', 'Product Demonstrations', 'Testimonial Videos', 'Social Media Content']
+      tagline: 'Story-led video that converts',
+      route: '/video-marketing',
+      accent: '#A855F7'
     }
   ];
 
@@ -144,33 +146,36 @@ const Home = () => {
           variants={staggerContainer}
         >
           {services.map((service, index) => (
-            <motion.div
+            <Link
               key={index}
-              className={styles['service-card']}
-              variants={fadeInUp}
+              to={service.route}
+              className={styles['service-card__link-wrapper']}
+              aria-label={`View ${service.title} work`}
             >
-              <div className={styles['service-card__icon']}>
-                {service.icon}
-              </div>
-              <h3 className={styles['service-card__title']}>{service.title}</h3>
-              <p className={styles['service-card__description']}>{service.description}</p>
-              <ul className={styles['service-card__features']}>
-                {service.features.map((feature, i) => (
-                  <li key={i} className={styles['service-card__feature']}>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                      <path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/>
-                    </svg>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <Link to="/services" className={styles['service-card__link']}>
-                Learn More
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
-            </motion.div>
+              <motion.div
+                className={`${styles['service-card']} ${index === 0 ? styles['service-card--primary'] : styles['service-card--secondary']}`}
+                variants={fadeInUp}
+                whileHover={{ scale: 1.02 }}
+                transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+              >
+                <span
+                  className={styles['service-card__accent']}
+                  style={{ background: `radial-gradient(400px 400px at 20% 20%, ${service.accent}10, transparent 30%)` }}
+                  aria-hidden
+                />
+
+                <div className={styles['service-card__icon']} style={{ boxShadow: `0 0 30px ${service.accent}22` }}>
+                  {service.icon}
+                </div>
+
+                <h3 className={styles['service-card__title']}>{service.title}</h3>
+                <div className={styles['service-card__tagline']}>{service.tagline}</div>
+
+                <div className={styles['service-card__cta']}>
+                  <span className="btn btn--white">View Our Work</span>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </motion.div>
       </section>
@@ -243,9 +248,6 @@ const Home = () => {
           <div className={styles.cta__buttons}>
             <Link to="/contact" className="btn btn--primary">
               Schedule a Consultation
-            </Link>
-            <Link to="/portfolio" className="btn btn--outline">
-              Explore Our Portfolio
             </Link>
           </div>
         </motion.div>
