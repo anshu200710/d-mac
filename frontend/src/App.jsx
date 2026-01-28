@@ -10,6 +10,7 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import VideoMarketing from './pages/VideoMarketing';
+import DigitalMarketing from './pages/DigitalMarketing/DigitalMarketing';
 import './styles/global.css';
 
 const AnimatedRoutes = () => {
@@ -46,6 +47,11 @@ const AnimatedRoutes = () => {
         <Route path="/video-marketing" element={
           <PageTransition>
             <VideoMarketing />
+          </PageTransition>
+        } />
+        <Route path="/digital-marketing" element={
+          <PageTransition>
+            <DigitalMarketing />
           </PageTransition>
         } />
       </Routes>
