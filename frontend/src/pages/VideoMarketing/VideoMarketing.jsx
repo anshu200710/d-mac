@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { VideoMarketingHero, FloatingImageCards } from '../../components/Hero';
+import { services } from '../../data/services';
 import styles from './VideoMarketing.module.css';
 
 const fadeInUp = {

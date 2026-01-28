@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './FloatingImageCards.module.css';
 
 const FloatingImageCards = ({ cardsData, sectionTitle = 'Our Video Marketing Services' }) => {
@@ -54,35 +55,62 @@ const FloatingImageCards = ({ cardsData, sectionTitle = 'Our Video Marketing Ser
       <h2 className={styles.sectionTitle}>{sectionTitle}</h2>
       
       <div className={styles.cardsGrid}>
-        {cards.map((card) => (
-          <div
-            key={card.id}
-            className={styles.card}
-            style={{
-              '--card-delay': `${card.id * 0.1}s`
-            }}
-            onMouseEnter={() => setHoveredCard(card.id)}
-            onMouseLeave={() => setHoveredCard(null)}
-          >
+        {cards.map((card) => {
+          if (card.route) {
+            return (
+              <Link
+                key={card.id}
+                to={card.route}
+                className={`${styles.card} ${styles.cardLink}`}
+                style={{ '--card-delay': `${card.id * 0.1}s` }}
+                onMouseEnter={() => setHoveredCard(card.id)}
+                onMouseLeave={() => setHoveredCard(null)}
+              >
+                <div
+                  className={`${styles.cardImage} ${hoveredCard === card.id ? styles.blurred : ''}`}
+                  style={{ backgroundImage: card.image }}
+                >
+                  <span className={styles.icon}>{card.icon}</span>
+                </div>
+
+                <div className={`${styles.overlay} ${hoveredCard === card.id ? styles.visible : ''}`}>
+                  <h3 className={styles.overlayTitle}>{card.title}</h3>
+                  <p className={styles.overlayDescription}>{card.description}</p>
+                </div>
+
+                <div className={styles.cardContent}>
+                  <h3 className={styles.cardTitle}>{card.title}</h3>
+                </div>
+              </Link>
+            );
+          }
+
+          return (
             <div
-              className={`${styles.cardImage} ${hoveredCard === card.id ? styles.blurred : ''}`}
-              style={{
-                backgroundImage: card.image
-              }}
+              key={card.id}
+              className={styles.card}
+              style={{ '--card-delay': `${card.id * 0.1}s` }}
+              onMouseEnter={() => setHoveredCard(card.id)}
+              onMouseLeave={() => setHoveredCard(null)}
             >
-              <span className={styles.icon}>{card.icon}</span>
+              <div
+                className={`${styles.cardImage} ${hoveredCard === card.id ? styles.blurred : ''}`}
+                style={{ backgroundImage: card.image }}
+              >
+                <span className={styles.icon}>{card.icon}</span>
+              </div>
+
+              <div className={`${styles.overlay} ${hoveredCard === card.id ? styles.visible : ''}`}>
+                <h3 className={styles.overlayTitle}>{card.title}</h3>
+                <p className={styles.overlayDescription}>{card.description}</p>
+              </div>
+
+              <div className={styles.cardContent}>
+                <h3 className={styles.cardTitle}>{card.title}</h3>
+              </div>
             </div>
-            
-            <div className={`${styles.overlay} ${hoveredCard === card.id ? styles.visible : ''}`}>
-              <h3 className={styles.overlayTitle}>{card.title}</h3>
-              <p className={styles.overlayDescription}>{card.description}</p>
-            </div>
-            
-            <div className={styles.cardContent}>
-              <h3 className={styles.cardTitle}>{card.title}</h3>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

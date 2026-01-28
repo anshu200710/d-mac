@@ -401,5 +401,11 @@
     font-size: 0.8rem;
     max-width: 150px;
   }
+
+  .cardLink {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
