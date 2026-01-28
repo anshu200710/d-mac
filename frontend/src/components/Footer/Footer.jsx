@@ -74,7 +74,7 @@ const Footer = () => {
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              <span>123 Business Ave, Suite 100<br />New York, NY 10001</span>
+              <span>E-49, 3rd Floor, Namo Narayan Building<br />Vijay Block, Block E, Laxmi Nagar, Delhi, 110092</span>
             </div>
             <div className={styles['footer__contact-item']}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

@@ -76,7 +76,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Visit Us',
-      content: '123 Business Avenue, Suite 100\nNew York, NY 10001'
+      content: 'E-49, 3rd Floor, Namo Narayan Building\nVijay Block, Block E, Laxmi Nagar, Delhi, 110092'
     },
     {
       icon: (
@@ -85,7 +85,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Call Us',
-      content: '+1 (555) 123-4567\nMon-Fri 9am-6pm EST'
+      content: '+91 98183 06231'
     },
     {
       icon: (
