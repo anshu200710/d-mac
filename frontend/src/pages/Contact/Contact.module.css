@@ -448,6 +448,17 @@
   margin-bottom: 0.75rem;
 }
 
+/* Form error */
+.form__error {
+  background: rgba(255, 90, 90, 0.06);
+  border: 1px solid rgba(255, 90, 90, 0.12);
+  color: #FF6B6B;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 .form__success-text {
   font-size: 1rem;
   color: #64748B;

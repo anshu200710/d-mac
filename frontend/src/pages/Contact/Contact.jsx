@@ -30,6 +30,7 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,12 +43,28 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    setSubmitError(null);
+
+    try {
+      const res = await fetch('https://n8n.vyaapaarniti.com/webhook/0dfcb197-fd9c-436b-aee1-35fb5ffe4056', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (!res.ok) {
+        const text = await res.text();
+        throw new Error(`Webhook error: ${res.status} ${text}`);
+      }
+
+      // success
+      setIsSubmitted(true);
+    } catch (err) {
+      console.error('Contact form submission failed', err);
+      setSubmitError('Something went wrong while sending your message. Please try again or email hello@dmac.com');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -149,6 +166,7 @@ const Contact = () => {
                   <p>Fill out the form below and we'll get back to you within 24 hours.</p>
                   
                   <form className={styles.form} onSubmit={handleSubmit}>
+                    {submitError && <div className={styles.form__error}>{submitError}</div>
                     <div className={styles.form__row}>
                       <div className={styles.form__group}>
                         <label className={styles.form__label}>
