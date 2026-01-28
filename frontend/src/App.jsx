@@ -35,6 +35,16 @@ const AnimatedRoutes = () => {
             <ServicePage />
           </PageTransition>
         } />
+        <Route path="/digital-marketing/:slug" element={
+          <PageTransition>
+            <ServicePage />
+          </PageTransition>
+        } />
+        <Route path="/video-marketing/:slug" element={
+          <PageTransition>
+            <ServicePage />
+          </PageTransition>
+        } />
         <Route path="/portfolio" element={
           <PageTransition>
             <Portfolio />

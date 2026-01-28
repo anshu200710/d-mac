@@ -74,6 +74,50 @@ const services = [
     images: ['https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1200&q=80&auto=format&fit=crop'],
     caseStudies: [{ title: 'Social Ads Campaign', image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000&q=80&auto=format&fit=crop', url: '/portfolio' }],
     meta: { title: 'Ad Videos — Our Services', description: 'Creative ad video production that drives results.' }
+  },
+  {
+    slug: 'influencer-marketing',
+    title: 'Influencer Marketing',
+    category: 'video',
+    shortDescription: 'Scale reach with creator partnerships.',
+    fullDescription: 'We partner with creators and develop content strategies that amplify brand messages authentically across platforms.',
+    bullets: ['Creator partnerships', 'Campaign strategy', 'Performance tracking'],
+    images: ['https://images.unsplash.com/photo-1506619216599-9d16f87b8cf2?w=1200&q=80&auto=format&fit=crop'],
+    caseStudies: [{ title: 'Creator Campaign', image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=80&auto=format&fit=crop', url: '/portfolio' }],
+    meta: { title: 'Influencer Marketing — Our Services', description: 'Creator-led video campaigns that drive awareness and engagement.' }
+  },
+  {
+    slug: 'brand-stories',
+    title: 'Brand Stories',
+    category: 'video',
+    shortDescription: 'Narrative-driven brand films.',
+    fullDescription: 'We craft documentary-style and short-form brand films that build emotional connection and long-term loyalty.',
+    bullets: ['Documentary brand films', 'Short form storytelling', 'Distribution strategy'],
+    images: ['https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop'],
+    caseStudies: [{ title: 'Brand Film', image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80&auto=format&fit=crop', url: '/portfolio' }],
+    meta: { title: 'Brand Stories — Our Services', description: 'Compelling brand films that tell your story.' }
+  },
+  {
+    slug: 'visual-content',
+    title: 'Visual Content',
+    category: 'video',
+    shortDescription: 'High-quality social-first visuals.',
+    fullDescription: 'Short-form visual content and motion graphics optimized for platforms and trends.',
+    bullets: ['Short-form visuals', 'Motion graphics', 'Platform-first editing'],
+    images: ['https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80&auto=format&fit=crop'],
+    caseStudies: [{ title: 'Visuals for Social', image: 'https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=1000&q=80&auto=format&fit=crop', url: '/portfolio' }],
+    meta: { title: 'Visual Content — Our Services', description: 'Eye-catching visual content for social platforms.' }
+  },
+  {
+    slug: 'product-demos',
+    title: 'Product Demos',
+    category: 'video',
+    shortDescription: 'Clear and persuasive product demonstrations.',
+    fullDescription: 'Hands-on product demos and explainer videos that reduce friction and increase conversion.',
+    bullets: ['Explainer videos', 'Feature demos', 'Conversion-focused scripting'],
+    images: ['https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80&auto=format&fit=crop'],
+    caseStudies: [{ title: 'Demo Series', image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000&q=80&auto=format&fit=crop', url: '/portfolio' }],
+    meta: { title: 'Product Demos — Our Services', description: 'Demo videos that convert curious browsers into customers.' }
   }
 ];
 

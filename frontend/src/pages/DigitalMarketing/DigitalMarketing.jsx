@@ -48,7 +48,7 @@ const DigitalMarketing = () => {
               id: 1,
               title: 'SEO & Content',
               description: 'Long-term organic growth through targeted content and technical SEO',
-              route: '/services/seo-content',
+              route: '/digital-marketing/seo-content',
               color: 'teal',
               image: 'linear-gradient(135deg, #00F5FF 0%, #00FF88 100%)',
               icon: '🔍'
@@ -57,7 +57,7 @@ const DigitalMarketing = () => {
               id: 2,
               title: 'Paid Media',
               description: 'Performance-driven ads on search & social with measurable ROI',
-              route: '/services/paid-media',
+              route: '/digital-marketing/paid-media',
               color: 'purple',
               image: 'linear-gradient(135deg, #A855F7 0%, #9333EA 100%)',
               icon: '💳'
@@ -66,7 +66,7 @@ const DigitalMarketing = () => {
               id: 3,
               title: 'Content Marketing',
               description: 'Funnel-focused content that educates, engages, and converts',
-              route: '/services/content-marketing',
+              route: '/digital-marketing/content-marketing',
               color: 'pink',
               image: 'linear-gradient(135deg, #F472B6 0%, #FF7AA8 100%)',
               icon: '✍️'
@@ -75,7 +75,7 @@ const DigitalMarketing = () => {
               id: 4,
               title: 'Social & Community',
               description: 'Brand-led social strategies and community growth',
-              route: '/services/social-community',
+              route: '/digital-marketing/social-community',
               color: 'green',
               image: 'linear-gradient(135deg, #00FF88 0%, #00DD77 100%)',
               icon: '🗣️'
@@ -84,7 +84,7 @@ const DigitalMarketing = () => {
               id: 5,
               title: 'Analytics & CRO',
               description: 'Data-driven optimization and full-funnel measurement',
-              route: '/services/analytics-cro',
+              route: '/digital-marketing/analytics-cro',
               color: 'blue',
               image: 'linear-gradient(135deg, #00D4FF 0%, #0099FF 100%)',
               icon: '📈'
