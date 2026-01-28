@@ -132,10 +132,6 @@ const Home = () => {
         >
           <span className={styles.services__label}>Our Services</span>
           <h2 className={styles.services__title}>Comprehensive Digital Solutions</h2>
-          <p className={styles.services__subtitle}>
-            From strategic digital marketing to compelling video production, we deliver 
-            end-to-end solutions that drive real business results.
-          </p>
         </motion.div>
 
         <motion.div

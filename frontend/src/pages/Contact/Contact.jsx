@@ -166,7 +166,7 @@ const Contact = () => {
                   <p>Fill out the form below and we'll get back to you within 24 hours.</p>
                   
                   <form className={styles.form} onSubmit={handleSubmit}>
-                    {submitError && <div className={styles.form__error}>{submitError}</div>
+                    {submitError && <div className={styles.form__error}>{submitError}</div>}
                     <div className={styles.form__row}>
                       <div className={styles.form__group}>
                         <label className={styles.form__label}>
