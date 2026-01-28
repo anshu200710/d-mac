@@ -9,8 +9,8 @@ const navLinks = [
   // { path: '/services', label: 'Services' },
   // { path: '/portfolio', label: 'Portfolio' },
   // { path: '/blog', label: 'Blog' },
-  { path: '/video-marketing', label: 'Video Marketing' },
   { path: '/digital-marketing', label: 'Digital Marketing' },
+  { path: '/video-marketing', label: 'Video Marketing' },
   { path: '/contact', label: 'Contact' },
 ];
 
