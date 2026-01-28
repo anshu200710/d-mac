@@ -1,4 +1,4 @@
-.contact-page {
+.contact {
   min-height: 100vh;
   background: var(--bg-primary);
 }
@@ -88,13 +88,60 @@
   padding: 0 1.5rem;
 }
 
+/* Page content wrapper (used by JSX as .content) */
+.content {
+  padding: 0 0 6rem;
+  background: #0F1419;
+  margin-top: -3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.content__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Two-column layout: left = info, right = form */
+.content__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .content__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .contact-info__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.info-card {
+/* Left column container used by JSX */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.social {
+  margin-top: 1.5rem;
+}
+
+.social__links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.info-card,
+.info__card {
   background: rgba(15, 20, 25, 0.8);
   border-radius: 1rem;
   padding: 2rem;
@@ -129,7 +176,8 @@
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 245, 255, 0.1);
 }
 
-.info-card__icon {
+.info-card__icon,
+.info__card-icon {
   width: 64px;
   height: 64px;
   border-radius: 1rem;
@@ -167,14 +215,16 @@
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
 }
 
-.info-card__title {
+.info-card__title,
+.info__card-title {
   font-size: 1.25rem;
   font-weight: 600;
   color: #FFFFFF;
   margin-bottom: 0.5rem;
 }
 
-.info-card__text {
+.info-card__text,
+.info__card-text {
   font-size: 1rem;
   color: #64748B;
   line-height: 1.6;
