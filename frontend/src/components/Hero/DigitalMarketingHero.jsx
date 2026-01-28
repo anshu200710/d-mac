@@ -7,7 +7,8 @@ const Megaphone = ({ position = [0, 0, 0] }) => {
   const ref = useRef();
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
-    ref.current.rotation.y = Math.sin(t * 0.6) * 0.15;
+    // slightly faster and larger swing to make it stand out
+    ref.current.rotation.y = Math.sin(t * 0.9) * 0.22;
   });
 
   return (
@@ -27,7 +28,8 @@ const AnalyticsBars = ({ position = [0, 0, 0] }) => {
   const groupRef = useRef();
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
-    groupRef.current.rotation.y = t * 0.12;
+    // rotate slightly faster for a livelier scene
+    groupRef.current.rotation.y = t * 0.22;
   });
 
   return (
@@ -46,7 +48,8 @@ const Target = ({ position = [0, 0, 0] }) => {
   const ref = useRef();
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
-    ref.current.rotation.z = Math.sin(t * 0.8) * 0.2;
+    // faster wobble and bigger amplitude so it catches the eye
+    ref.current.rotation.z = Math.sin(t * 1.2) * 0.28;
   });
 
   return (
@@ -76,15 +79,15 @@ const Monitor = ({ position = [0, 0, 0] }) => {
     <group ref={ref} position={position}>
       <Float speed={1} rotationIntensity={0.6} floatIntensity={0.3}>
         <RoundedBox args={[1.6, 1.0, 0.08]} radius={0.06} smoothness={6} position={[0, 0.1, 0]}>
-          <meshStandardMaterial color="#081018" metalness={0.2} roughness={0.3} emissive="#00121A" emissiveIntensity={0.03} />
+          <meshStandardMaterial color="#ffffff" metalness={0.2} roughness={0.3} emissive="#00121A" emissiveIntensity={0.03} />
         </RoundedBox>
         {/* Screen */}
         <RoundedBox args={[1.4, 0.76, 0.02]} radius={0.04} smoothness={4} position={[0, 0.12, 0.05]}>
-          <meshStandardMaterial color="#071825" metalness={0.2} roughness={0.2} emissive="#002833" emissiveIntensity={0.2} />
+          <meshStandardMaterial color="#abb7c1" metalness={0.2} roughness={0.2} emissive="#002833" emissiveIntensity={0.2} />
         </RoundedBox>
         {/* Stand */}
         <Box args={[0.24, 0.12, 0.12]} position={[0, -0.5, 0.03]}> 
-          <meshStandardMaterial color="#0A0F14" metalness={0.6} roughness={0.4} />
+          <meshStandardMaterial color="#cfd0d1" metalness={0.6} roughness={0.4} />
         </Box>
       </Float>
     </group>
@@ -96,8 +99,9 @@ const GrowthArrow = ({ position = [0, 0, 0] }) => {
   const ref = useRef();
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
-    ref.current.position.y = 0.15 + Math.sin(t * 1.2) * 0.08;
-    ref.current.rotation.z = Math.sin(t * 0.8) * 0.08;
+    // float a bit higher and give it a livelier wobble
+    ref.current.position.y = 0.25 + Math.sin(t * 1.0) * 0.12;
+    ref.current.rotation.z = Math.sin(t * 1.0) * 0.12;
   });
 
   return (
@@ -120,7 +124,8 @@ const TrendLine = ({ position = [0, 0, 0] }) => {
   const ref = useRef();
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
-    ref.current.rotation.y = Math.sin(t * 0.16) * 0.06;
+    // subtle rotation, slightly faster
+    ref.current.rotation.y = Math.sin(t * 0.28) * 0.10;
   });
 
   return (
@@ -130,10 +135,7 @@ const TrendLine = ({ position = [0, 0, 0] }) => {
           <meshStandardMaterial color={i === 3 ? '#A855F7' : '#00D4FF'} metalness={0.6} roughness={0.25} emissive={i === 3 ? '#A855F7' : '#00D4FF'} emissiveIntensity={0.08} />
         </Box>
       ))}
-      {/* small connector line */}
-      <Torus args={[1.0, 0.02, 8, 100]} rotation={[-Math.PI / 2, 0, -0.2]}>
-        <meshStandardMaterial color="#00F5FF" metalness={0.2} roughness={0.8} emissive="#00F5FF" emissiveIntensity={0.02} />
-      </Torus>
+
     </group>
   );
 };
@@ -146,16 +148,16 @@ const DigitalMarketingScene = () => {
       <pointLight position={[0, 5, 5]} intensity={0.8} color="#00F5FF" />
       <pointLight position={[5, -5, 5]} intensity={0.6} color="#A855F7" />
 
-      <Megaphone position={[-2.5, 0, 0]} />
-      <AnalyticsBars position={[0, -0.6, 0]} />
-      <Target position={[2.6, 0, 0]} />
+      <Megaphone position={[-3.2, 0.9, -1.6]} />
+      <AnalyticsBars position={[1.8, -1.2, -1.4]} />
+      <Target position={[3.6, 1.0, -2.2]} />
 
-      {/* New growth shapes */}
-      <Monitor position={[-0.2, 1.2, -1.5]} />
-      <GrowthArrow position={[1.6, -0.2, 0]} />
-      <TrendLine position={[0.6, -0.2, 0]} />
+      {/* New growth shapes (more scattered) */}
+      <Monitor position={[-1.6, -0.4, 0.8]} />
+      <GrowthArrow position={[2.4, 0.4, -0.6]} />
+      <TrendLine position={[0.2, -0.9, -1.0]} />
 
-      <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.35} />
+      <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
     </>
   );
 };
