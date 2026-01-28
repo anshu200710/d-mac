@@ -273,6 +273,87 @@
   margin-top: 0.5rem;
 }
 
+/* Gallery & Case Studies */
+.gallery {
+  padding: 2.5rem 0;
+  background: transparent;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery__item img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.gallery__item img:hover {
+  transform: scale(1.02);
+} 
+
+.caseStudies {
+  padding: 2.5rem 0;
+}
+
+.cases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.case {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.case img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  height: auto;
+  max-height: 360px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.case__overlay {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  z-index: 2;
+}
+
+.case::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.45) 100%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.case:hover::after {
+  opacity: 1;
+}
+
+.case:hover img {
+  transform: scale(1.03);
+}
+
 /* Process Timeline Section */
 .process {
   padding: 8rem 0;
