@@ -26,8 +26,7 @@ const services = [
     shortDescription: 'Modern web experiences built for performance and conversion.',
     fullDescription: 'We build fast, accessible, and secure websites and web applications that convert. Our work covers responsive development, e-commerce, headless CMS integrations, and performance optimization.',
     bullets: ['Responsive & accessible sites', 'E-commerce & headless CMS', 'Performance & SEO optimization'],
-    images: ['https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop'],
-    images: ['https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop'],
+    images: ['https://res.cloudinary.com/dgmovv8me/image/upload/v1769681696/Web_Dev_ngtvoq.svg'],
 
     caseStudies: [
       { title: 'Vyaapaarniti', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_144601_pdejfz.png', url: 'https://vyaapaarniti.com' },
