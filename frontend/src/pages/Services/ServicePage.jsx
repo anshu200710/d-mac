@@ -4,6 +4,7 @@ import services from '../../data/servicesData';
 import { motion } from 'framer-motion';
 import servicesStyles from './Services.module.css';
 import styles from './ServicePage.module.css';
+import VideoReels from '../../components/VideoReels/VideoReels';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -129,64 +130,73 @@ const ServicePage = () => {
         </div>
       </section>
 
-      <section className={servicesStyles.gallery}>
-        <div className={servicesStyles['service-detail__container']}>
-          <h2 className={servicesStyles['service-detail__title']}>Work & Examples</h2>
-          {service.images && service.images.length > 0 && (
-            <div className={servicesStyles.gallery__grid}>
-              {service.images.map((src, i) => (
-                <figure key={i} className={servicesStyles.gallery__item}>
-                  <img
-                    src={src}
-                    alt={`${service.title} example ${i + 1}`}
-                    loading="lazy"
-                    decoding="async"
-                    onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Example'; }}
-                  />
-                </figure>
-              ))}
-            </div>
-          )}
+      {service.category === 'video' ? (
+        // Video reels work section
+        <div>
+          <VideoReels videos={service.videos} />
         </div>
-      </section>
-
-      {service.caseStudies && service.caseStudies.length > 0 && (
-        <section className={servicesStyles.caseStudies}>
-          <div className={servicesStyles['service-detail__container']}>
-            <h2 className={servicesStyles['service-detail__title']}>Case Studies</h2>
-            <div className={servicesStyles.cases}>
-              {service.caseStudies.map((c, i) => (
-                c.url ? (
-                  <Link to={c.url} key={i} className={servicesStyles.case} aria-label={c.title}>
-                    <img
-                      src={c.image}
-                      alt={c.title}
-                      loading="lazy"
-                      decoding="async"
-                      onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Case+Study'; }}
-                    />
-                    <div className={servicesStyles.case__overlay}>
-                      <h4>{c.title}</h4>
-                    </div>
-                  </Link>
-                ) : (
-                  <div key={i} className={servicesStyles.case} aria-label={c.title}>
-                    <img
-                      src={c.image}
-                      alt={c.title}
-                      loading="lazy"
-                      decoding="async"
-                      onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Case+Study'; }}
-                    />
-                    <div className={servicesStyles.case__overlay}>
-                      <h4>{c.title}</h4>
-                    </div>
-                  </div>
-                )
-              ))}
+      ) : (
+        <>
+          <section className={servicesStyles.gallery}>
+            <div className={servicesStyles['service-detail__container']}>
+              <h2 className={servicesStyles['service-detail__title']}>Work & Examples</h2>
+              {service.images && service.images.length > 0 && (
+                <div className={servicesStyles.gallery__grid}>
+                  {service.images.map((src, i) => (
+                    <figure key={i} className={servicesStyles.gallery__item}>
+                      <img
+                        src={src}
+                        alt={`${service.title} example ${i + 1}`}
+                        loading="lazy"
+                        decoding="async"
+                        onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Example'; }}
+                      />
+                    </figure>
+                  ))}
+                </div>
+              )}
             </div>
-          </div>
-        </section>
+          </section>
+
+          {service.caseStudies && service.caseStudies.length > 0 && (
+            <section className={servicesStyles.caseStudies}>
+              <div className={servicesStyles['service-detail__container']}>
+                <h2 className={servicesStyles['service-detail__title']}>Case Studies</h2>
+                <div className={servicesStyles.cases}>
+                  {service.caseStudies.map((c, i) => (
+                    c.url ? (
+                      <Link to={c.url} key={i} className={servicesStyles.case} aria-label={c.title}>
+                        <img
+                          src={c.image}
+                          alt={c.title}
+                          loading="lazy"
+                          decoding="async"
+                          onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Case+Study'; }}
+                        />
+                        <div className={servicesStyles.case__overlay}>
+                          <h4>{c.title}</h4>
+                        </div>
+                      </Link>
+                    ) : (
+                      <div key={i} className={servicesStyles.case} aria-label={c.title}>
+                        <img
+                          src={c.image}
+                          alt={c.title}
+                          loading="lazy"
+                          decoding="async"
+                          onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Case+Study'; }}
+                        />
+                        <div className={servicesStyles.case__overlay}>
+                          <h4>{c.title}</h4>
+                        </div>
+                      </div>
+                    )
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+        </>
       )}
 
       <section className={servicesStyles.cta}>

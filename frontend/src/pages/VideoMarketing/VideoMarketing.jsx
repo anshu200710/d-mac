@@ -52,11 +52,9 @@ const VideoMarketing = () => {
       <FloatingImageCards
         sectionTitle="Our Video Marketing Services"
         cardsData={[
-          { id: 1, title: 'Ad Videos', description: 'Engaging promotional content', route: '/video-marketing/ad-videos', color: 'cyan', image: 'linear-gradient(135deg, #00F5FF 0%, #00D4FF 100%)', icon: '🎬' },
-          { id: 2, title: 'Influencer Marketing', description: 'Connect with top creators', route: '/video-marketing/influencer-marketing', color: 'purple', image: 'linear-gradient(135deg, #A855F7 0%, #9333EA 100%)', icon: '⭐' },
-          { id: 3, title: 'Brand Stories', description: 'Authentic brand narratives', route: '/video-marketing/brand-stories', color: 'pink', image: 'linear-gradient(135deg, #F472B6 0%, #EC4899 100%)', icon: '📖' },
-          { id: 4, title: 'Visual Content', description: 'Stunning visual experiences', route: '/video-marketing/visual-content', color: 'green', image: 'linear-gradient(135deg, #00FF88 0%, #00DD77 100%)', icon: '🎨' },
-          { id: 5, title: 'Product Demos', description: 'Interactive product showcase', route: '/video-marketing/product-demos', color: 'blue', image: 'linear-gradient(135deg, #00D4FF 0%, #0099FF 100%)', icon: '🚀' }
+          { id: 1, title: 'Meta Ad Video', description: 'Short-form paid social ads optimized for Meta platforms', route: '/video-marketing/meta-ad-video', color: 'cyan', image: 'linear-gradient(135deg, #00F5FF 0%, #00D4FF 100%)', icon: '📣' },
+          { id: 2, title: 'BTS', description: 'Behind-the-scenes shoots, candid content and short documentary pieces', route: '/video-marketing/bts', color: 'purple', image: 'linear-gradient(135deg, #A855F7 0%, #9333EA 100%)', icon: '🎥' },
+          { id: 3, title: 'Ad Video Shoot', description: 'Full production ad shoots for campaign-quality creative', route: '/video-marketing/ad-video-shoot', color: 'pink', image: 'linear-gradient(135deg, #F472B6 0%, #EC4899 100%)', icon: '🎬' }
         ]}
       />
 

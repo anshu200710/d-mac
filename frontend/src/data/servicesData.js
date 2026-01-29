@@ -63,61 +63,56 @@ const services = [
     caseStudies: [{ title: 'CRO for SaaS', image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1000&q=80&auto=format&fit=crop' }],
     meta: { title: 'Analytics & CRO — Our Services', description: 'Analytics and CRO that drives measurable improvements.' }
   },
-  // Example video service as placeholder
   {
-    slug: 'ad-videos',
-    title: 'Ad Videos',
+    slug: 'meta-ad-video',
+    title: 'Meta Ad Video',
     category: 'video',
-    shortDescription: 'High-performing ad creative for social and broadcast.',
-    fullDescription: 'We produce ad creative optimized for platforms and audiences — short-form, long-form, and dynamic ads that scale.',
-    bullets: ['Short-form social ads', 'Broadcast & OTT spots', 'Ad performance optimization'],
+    shortDescription: 'Short-form ad creative tailored for Meta platforms.',
+    fullDescription: 'We produce snackable, high-converting videos optimized for reach, relevance and performance on Meta platforms (Facebook & Instagram). We test formats, hooks and editing styles to maximize ad relevance and ROAS.',
+    bullets: ['Creative testing & adaptation', 'Platform-optimized formats', 'Conversion-focused editing'],
     images: ['https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1200&q=80&auto=format&fit=crop'],
-    caseStudies: [{ title: 'Social Ads Campaign', image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000&q=80&auto=format&fit=crop' }],
-    meta: { title: 'Ad Videos — Our Services', description: 'Creative ad video production that drives results.' }
+    videos: [
+      'https://www.youtube.com/embed/M7lc1UVf-VE',
+      'https://www.youtube.com/embed/KGQPZN46IkQ?rel=0',
+      'https://www.youtube.com/embed/aqz-KE-bpKQ',
+      'https://www.youtube.com/embed/T22NVnTtaAk?rel=0',
+      'https://www.youtube.com/embed/dsio_HBK_uc?rel=0',
+      'https://www.youtube.com/embed/ZtKnUBLCIlE?rel=0'
+    ],
+    caseStudies: [{ title: 'Meta Ads Lift', image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000&q=80&auto=format&fit=crop' }],
+    meta: { title: 'Meta Ad Video — Our Services', description: 'Meta ad video production focused on performance and reach.' }
   },
   {
-    slug: 'influencer-marketing',
-    title: 'Influencer Marketing',
+    slug: 'bts',
+    title: 'BTS',
     category: 'video',
-    shortDescription: 'Scale reach with creator partnerships.',
-    fullDescription: 'We partner with creators and develop content strategies that amplify brand messages authentically across platforms.',
-    bullets: ['Creator partnerships', 'Campaign strategy', 'Performance tracking'],
-    images: ['https://images.unsplash.com/photo-1506619216599-9d16f87b8cf2?w=1200&q=80&auto=format&fit=crop'],
-    caseStudies: [{ title: 'Creator Campaign', image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=80&auto=format&fit=crop' }],
-    meta: { title: 'Influencer Marketing — Our Services', description: 'Creator-led video campaigns that drive awareness and engagement.' }
-  },
-  {
-    slug: 'brand-stories',
-    title: 'Brand Stories',
-    category: 'video',
-    shortDescription: 'Narrative-driven brand films.',
-    fullDescription: 'We craft documentary-style and short-form brand films that build emotional connection and long-term loyalty.',
-    bullets: ['Documentary brand films', 'Short form storytelling', 'Distribution strategy'],
+    shortDescription: 'Behind-the-scenes content & candid storytelling.',
+    fullDescription: 'We capture the story behind your brand and production—authentic BTS footage, short-form documentary pieces and creator-led content that builds trust and context.',
+    bullets: ['BTS documentary shorts', 'Creator & set coverage', 'Repurposable social assets'],
     images: ['https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop'],
-    caseStudies: [{ title: 'Brand Film', image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80&auto=format&fit=crop' }],
-    meta: { title: 'Brand Stories — Our Services', description: 'Compelling brand films that tell your story.' }
+    videos: [
+      'https://www.youtube.com/embed/ScMzIvxBSi4',
+      'https://www.youtube.com/embed/YE7VzlLtp-4',
+      'https://www.youtube.com/embed/nzdw9V2qsSk?rel=0'
+    ],
+    caseStudies: [{ title: 'BTS Series', image: 'https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=1000&q=80&auto=format&fit=crop' }],
+    meta: { title: 'BTS — Our Services', description: 'Behind-the-scenes storytelling that humanizes your brand.' }
   },
   {
-    slug: 'visual-content',
-    title: 'Visual Content',
+    slug: 'ad-video-shoot',
+    title: 'Ad Video Shoot',
     category: 'video',
-    shortDescription: 'High-quality social-first visuals.',
-    fullDescription: 'Short-form visual content and motion graphics optimized for platforms and trends.',
-    bullets: ['Short-form visuals', 'Motion graphics', 'Platform-first editing'],
+    shortDescription: 'Full-service ad production and shoots.',
+    fullDescription: 'From pre-production planning to full production shoots and post-production, we deliver broadcast-quality ad content tailored for campaign needs.',
+    bullets: ['End-to-end production', 'Director-led shoots', 'Post-production & color grading'],
     images: ['https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80&auto=format&fit=crop'],
-    caseStudies: [{ title: 'Visuals for Social', image: 'https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=1000&q=80&auto=format&fit=crop' }],
-    meta: { title: 'Visual Content — Our Services', description: 'Eye-catching visual content for social platforms.' }
-  },
-  {
-    slug: 'product-demos',
-    title: 'Product Demos',
-    category: 'video',
-    shortDescription: 'Clear and persuasive product demonstrations.',
-    fullDescription: 'Hands-on product demos and explainer videos that reduce friction and increase conversion.',
-    bullets: ['Explainer videos', 'Feature demos', 'Conversion-focused scripting'],
-    images: ['https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80&auto=format&fit=crop'],
-    caseStudies: [{ title: 'Demo Series', image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000&q=80&auto=format&fit=crop' }],
-    meta: { title: 'Product Demos — Our Services', description: 'Demo videos that convert curious browsers into customers.' }
+    videos: [
+      'https://www.youtube.com/embed/wLN35AebXdY?rel=0',
+      'https://www.youtube.com/embed/3fumBcKC6RE',
+      'https://www.youtube.com/embed/-Y9V1B9f7_c?rel=0'      
+    ],
+    caseStudies: [{ title: 'Campaign Shoot', image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80&auto=format&fit=crop' }],
+    meta: { title: 'Ad Video Shoot — Our Services', description: 'Professional ad video shoots that elevate your campaigns.' }
   }
 ];
 
