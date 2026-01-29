@@ -140,7 +140,23 @@ const ServicePage = () => {
           <section className={servicesStyles.gallery}>
             <div className={servicesStyles['service-detail__container']}>
               <h2 className={servicesStyles['service-detail__title']}>Work & Examples</h2>
-              {service.images && service.images.length > 0 && (
+              {(service.caseStudies && service.caseStudies.length > 0) ? (
+                <div className={servicesStyles.gallery__grid}>
+                  {service.caseStudies.map((cs, i) => (
+                    <figure key={i} className={servicesStyles.gallery__item}>
+                      <a href={cs.url || 'https://example.com'} target="_blank" rel="noopener noreferrer">
+                        <img
+                          src={cs.image}
+                          alt={`${cs.title || service.title} example ${i + 1}`}
+                          loading="lazy"
+                          decoding="async"
+                          onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Example'; }}
+                        />
+                      </a>
+                    </figure>
+                  ))}
+                </div>
+              ) : (service.images && service.images.length > 0 && (
                 <div className={servicesStyles.gallery__grid}>
                   {service.images.map((src, i) => (
                     <figure key={i} className={servicesStyles.gallery__item}>
@@ -154,7 +170,7 @@ const ServicePage = () => {
                     </figure>
                   ))}
                 </div>
-              )}
+              ))}
             </div>
           </section>
 
@@ -168,7 +184,6 @@ const ServicePage = () => {
           <p className={servicesStyles.cta__description}>Let’s discuss how this service can help you achieve your goals and drive measurable growth.</p>
           <div className={servicesStyles.cta__buttons}>
             <Link to="/contact" className="btn btn--primary">Schedule a Consultation</Link>
-            <Link to="/portfolio" className="btn btn--outline">View Our Work</Link>
           </div>
         </div>
       </section>

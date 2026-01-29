@@ -33,6 +33,15 @@ const services = [
              'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_145624_bddieb.png',
              'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680031/Screenshot_2026-01-29_145603_eakewj.png'],
 
+    caseStudies: [
+      { title: 'Vyaapaarniti', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_144601_pdejfz.png', url: 'https://vyaapaarniti.com' },
+      { title: 'E-Commerce', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_145533_laoy1y.png', url: 'https://example.com' },
+      { title: 'Site Snapshot', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_145552_cfqsw0.png', url: 'https://example.com' },
+      { title: 'SS Makeover Fairy', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_145624_bddieb.png', url: 'https://ssmakeoverfairy.com/' },
+      { title: 'Healat India', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680031/Screenshot_2026-01-29_145603_eakewj.png', url: 'https://healatindia.com' },
+      { title: 'Ananta Hill', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680031/Screenshot_2026-01-29_145731_yjyg68.png', url: 'https://anantahill.in/' }
+    ],
+
     meta: { title: 'Web Development — Our Services', description: 'Web development that combines performance, UX, and scalability.' }
   },
 
