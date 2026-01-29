@@ -158,48 +158,7 @@ const ServicePage = () => {
             </div>
           </section>
 
-          {service.caseStudies && service.caseStudies.length > 0 && (
-            <section className={servicesStyles.caseStudies}>
-              <div className={servicesStyles['service-detail__container']}>
-                <h2 className={servicesStyles['service-detail__title']}>Case Studies</h2>
-                <div className={servicesStyles.cases}>
-                  {service.caseStudies.map((c, i) => (
-                    c.url ? (
-                      <Link to={c.url} key={i} className={servicesStyles.case} aria-label={c.title}>
-                        <div className={servicesStyles['case__media']}>
-                          <img
-                            src={c.image}
-                            alt={c.title}
-                            loading="lazy"
-                            decoding="async"
-                            onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Case+Study'; }}
-                          />
-                          <div className={servicesStyles.case__overlay}>
-                            <h4>{c.title}</h4>
-                          </div>
-                        </div>
-                      </Link>
-                    ) : (
-                      <div key={i} className={servicesStyles.case} aria-label={c.title}>
-                        <div className={servicesStyles['case__media']}>
-                          <img
-                            src={c.image}
-                            alt={c.title}
-                            loading="lazy"
-                            decoding="async"
-                            onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Case+Study'; }}
-                          />
-                          <div className={servicesStyles.case__overlay}>
-                            <h4>{c.title}</h4>
-                          </div>
-                        </div>
-                      </div>
-                    )
-                  ))}
-                </div>
-              </div>
-            </section>
-          )}
+
         </>
       )}
 

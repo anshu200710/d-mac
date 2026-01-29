@@ -281,9 +281,16 @@
 
 .gallery__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* two examples per row */
   gap: 1rem;
   margin-top: 1rem;
+}
+
+/* Responsive: stack to one column on smaller screens */
+@media (max-width: 800px) {
+  .gallery__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .gallery__item img {

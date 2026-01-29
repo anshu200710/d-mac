@@ -44,23 +44,23 @@ const DigitalMarketing = () => {
         <FloatingImageCards
           sectionTitle="Our Digital Marketing Services"
           cardsData={[
-            {
+           {
               id: 1,
-              title: 'SEO & Content',
-              description: 'Long-term organic growth through targeted content and technical SEO',
-              route: '/digital-marketing/seo-content',
-              color: 'teal',
-              image: 'linear-gradient(135deg, #00F5FF 0%, #00FF88 100%)',
-              icon: '🔍'
-            },
-            {
-              id: 2,
               title: 'Web Development',
               description: 'Modern web experiences built for performance, accessibility, and conversion',
               route: '/digital-marketing/web-development',
               color: 'indigo',
               image: 'linear-gradient(135deg, #6366F1 0%, #4F46E5 100%)',
               icon: '💻'
+            },
+            {
+              id: 2,
+              title: 'SEO & Content',
+              description: 'Long-term organic growth through targeted content and technical SEO',
+              route: '/digital-marketing/seo-content',
+              color: 'teal',
+              image: 'linear-gradient(135deg, #00F5FF 0%, #00FF88 100%)',
+              icon: '🔍'
             },
             {
               id: 3,
