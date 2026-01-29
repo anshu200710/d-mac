@@ -27,7 +27,16 @@ const services = [
     fullDescription: 'We build fast, accessible, and secure websites and web applications that convert. Our work covers responsive development, e-commerce, headless CMS integrations, and performance optimization.',
     bullets: ['Responsive & accessible sites', 'E-commerce & headless CMS', 'Performance & SEO optimization'],
     images: ['https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop'],
-    caseStudies: [{ title: 'E-commerce Platform', image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000&q=80&auto=format&fit=crop' }],
+    images: ['https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop'],
+
+    caseStudies: [
+      { title: 'Vyaapaarniti', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_144601_pdejfz.png', url: 'https://vyaapaarniti.com' },
+      { title: 'E-Commerce', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_145533_laoy1y.png' },
+      { title: 'Site Snapshot', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_145552_cfqsw0.png' },
+      { title: 'SS Makeover Fairy', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_145624_bddieb.png', url: 'https://ssmakeoverfairy.com/' },
+      { title: 'Healat India', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680031/Screenshot_2026-01-29_145603_eakewj.png', url: 'https://healatindia.com' },
+      { title: 'Ananta Hill', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680031/Screenshot_2026-01-29_145731_yjyg68.png', url: 'https://anantahill.in/' }
+    ],
     meta: { title: 'Web Development — Our Services', description: 'Web development that combines performance, UX, and scalability.' }
   },
 

@@ -306,9 +306,12 @@
 
 .cases {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
+  grid-template-columns: 1fr; /* one case per row */
+  gap: 1.5rem;
   margin-top: 1rem;
+  max-width: 960px; /* wider for larger case visuals */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .case {
@@ -316,27 +319,54 @@
   display: block;
   text-decoration: none;
   color: inherit;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .case img {
   width: 100%;
-  aspect-ratio: 4/3;
-  height: auto;
-  max-height: 360px;
+  height: 420px; /* desktop height */
+  max-height: 520px;
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
 
-.case__overlay {
-  position: absolute;
-  left: 16px;
-  bottom: 14px;
-  z-index: 2;
+@media (max-width: 900px) {
+  .case img {
+    height: 360px;
+    max-height: 420px;
+  }
 }
 
+@media (max-width: 480px) {
+  .case img {
+    height: 240px;
+    max-height: 280px;
+  }
+}
+
+/* Media wrapper and overlay for case study title */
+.case__media {
+  position: relative;
+}
+
+.case__overlay {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 3;
+  background: linear-gradient(90deg, rgba(0,0,0,0.6), rgba(10,10,15,0.4));
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+.case__overlay h4 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
 .case::after {
   content: '';
   position: absolute;
