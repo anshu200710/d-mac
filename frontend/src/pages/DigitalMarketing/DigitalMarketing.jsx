@@ -30,7 +30,7 @@ const DigitalMarketing = () => {
               Grow Your Brand With Data-Driven Marketing
             </motion.p>
             <motion.p variants={fadeInUp} className={styles.heroDescription}>
-              From SEO and paid media to full-funnel growth strategies, we craft campaigns that scale and convert.
+              From SEO and web development to full-funnel growth strategies, we craft campaigns that scale and convert.
             </motion.p>
             <motion.button variants={fadeInUp} className="btn btn--accent">
               Get a Strategy
@@ -55,12 +55,12 @@ const DigitalMarketing = () => {
             },
             {
               id: 2,
-              title: 'Paid Media',
-              description: 'Performance-driven ads on search & social with measurable ROI',
-              route: '/digital-marketing/paid-media',
-              color: 'purple',
-              image: 'linear-gradient(135deg, #A855F7 0%, #9333EA 100%)',
-              icon: '💳'
+              title: 'Web Development',
+              description: 'Modern web experiences built for performance, accessibility, and conversion',
+              route: '/digital-marketing/web-development',
+              color: 'indigo',
+              image: 'linear-gradient(135deg, #6366F1 0%, #4F46E5 100%)',
+              icon: '💻'
             },
             {
               id: 3,

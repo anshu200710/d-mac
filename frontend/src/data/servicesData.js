@@ -20,16 +20,17 @@ const services = [
     meta: { title: 'SEO & Content — Our Services', description: 'SEO and content services that increase organic traffic, authority, and conversions.' }
   },
   {
-    slug: 'paid-media',
-    title: 'Paid Media',
+    slug: 'web-development',
+    title: 'Web Development',
     category: 'digital',
-    shortDescription: 'Performance-driven search and social advertising.',
-    fullDescription: 'We design and manage high-performing campaigns across search and social, focusing on ROAS and scalable channels. From creative testing to automated bidding, we optimize for conversions and growth.',
-    bullets: ['Paid search (Google Ads)', 'Social ads (Meta, X, LinkedIn)', 'Creative & landing page testing'],
+    shortDescription: 'Modern web experiences built for performance and conversion.',
+    fullDescription: 'We build fast, accessible, and secure websites and web applications that convert. Our work covers responsive development, e-commerce, headless CMS integrations, and performance optimization.',
+    bullets: ['Responsive & accessible sites', 'E-commerce & headless CMS', 'Performance & SEO optimization'],
     images: ['https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop'],
-    caseStudies: [{ title: 'PPC ROAS Improvement', image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000&q=80&auto=format&fit=crop' }],
-    meta: { title: 'Paid Media — Our Services', description: 'Paid media management for measurable results and scale.' }
+    caseStudies: [{ title: 'E-commerce Platform', image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000&q=80&auto=format&fit=crop' }],
+    meta: { title: 'Web Development — Our Services', description: 'Web development that combines performance, UX, and scalability.' }
   },
+
   {
     slug: 'content-marketing',
     title: 'Content Marketing',
@@ -64,15 +65,15 @@ const services = [
     meta: { title: 'Analytics & CRO — Our Services', description: 'Analytics and CRO that drives measurable improvements.' }
   },
   {
-    slug: 'meta-ad-video',
-    title: 'Meta Ad Video',
+    slug: 'meta-ad-performance',
+    title: 'Meta Ad Performance',
     category: 'video',
     shortDescription: 'Short-form ad creative tailored for Meta platforms.',
     fullDescription: 'We produce snackable, high-converting videos optimized for reach, relevance and performance on Meta platforms (Facebook & Instagram). We test formats, hooks and editing styles to maximize ad relevance and ROAS.',
     bullets: ['Creative testing & adaptation', 'Platform-optimized formats', 'Conversion-focused editing'],
     images: ['https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1200&q=80&auto=format&fit=crop'],
     videos: [
-      'https://www.youtube.com/embed/M7lc1UVf-VE',
+      'https://www.youtube.com/embed/q3lX2p_Uy9I?rel=0',
       'https://www.youtube.com/embed/KGQPZN46IkQ?rel=0',
       'https://www.youtube.com/embed/aqz-KE-bpKQ',
       'https://www.youtube.com/embed/T22NVnTtaAk?rel=0',

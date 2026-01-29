@@ -658,3 +658,10 @@
     max-width: 300px;
   }
 }
+
+/* Hide the right visual card on mobile for both digital and video services */
+@media (max-width: 768px) {
+  .service-detail__visual {
+    display: none;
+  }
+}

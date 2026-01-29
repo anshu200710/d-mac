@@ -67,9 +67,7 @@ const VideoReels = ({ videos = [] }) => {
                       <div className={styles.posterFallback} />
                     )}
 
-                    <span className={styles.playButton} aria-hidden>
-                      ▶
-                    </span>
+                    <span className={styles.playButton} aria-hidden />
                   </button>
                 )}
               </div>
