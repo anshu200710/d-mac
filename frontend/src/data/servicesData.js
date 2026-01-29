@@ -107,15 +107,37 @@ const services = [
     meta: { title: 'Content Marketing — Our Services', description: 'Content marketing that educates and converts.' }
   },
   {
-    slug: 'social-community',
-    title: 'Social & Community',
+    slug: 'google-my-business',
+    title: 'Google My Business (GMB)',
     category: 'digital',
-    shortDescription: 'Build authentic communities and conversations.',
-    fullDescription: 'Our social-first approach creates brand-led communities and content strategies that foster engagement and loyalty.',
-    bullets: ['Community strategy', 'Organic social content', 'Creator & influencer partnerships'],
-    images: ['https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&auto=format&fit=crop'],
-    caseStudies: [{ title: 'Community Growth Case', image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1000&q=80&auto=format&fit=crop' }],
-    meta: { title: 'Social & Community — Our Services', description: 'Social strategies that grow communities and brand affinity.' }
+    shortDescription: 'Local discovery & GMB optimization to increase local visibility and store visits.',
+    fullDescription: 'We optimize and manage your Google Business Profile to improve local search visibility, map placement, and conversions. Our process includes profile setup and verification, local citation and NAP consistency, GMB posts and offers, review and reputation management, and schema optimizations to align your site with local signals.',
+    bullets: ['GMB setup & verification', 'Local citations & NAP consistency', 'GMB posts & offers', 'Review & reputation management', 'Local schema & maps optimization'],
+    images: [
+      'https://images.unsplash.com/photo-1505238680356-667803448bb6?w=1200&q=80&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1520975912413-5e9ff9e0a2d2?w=1200&q=80&auto=format&fit=crop'
+    ],
+    examples: [
+      {
+        title: 'Neighborhood Bakery — GMB Optimization',
+        description: 'Profile setup, localized posts and review response — 42% increase in map clicks.',
+        image: 'https://images.unsplash.com/photo-1542736667-069246bdbc6d?w=1200&q=80&auto=format&fit=crop',
+        url: 'https://example.com/neighborhood-bakery'
+      },
+      {
+        title: 'Chain Restaurant Local Listings',
+        description: 'Citation cleanup and menu schema — improved local rankings across 10 locations.',
+        image: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=1200&q=80&auto=format&fit=crop',
+        url: 'https://example.com/restaurant'
+      },
+      {
+        title: 'Clinic Multi-location Setup',
+        description: 'Verified listings and review management — increased appointment requests by 35%.',
+        image: 'https://images.unsplash.com/photo-1527775819923-64e07cb7fbc9?w=1200&q=80&auto=format&fit=crop',
+        url: 'https://example.com/clinic'
+      }
+    ],
+    meta: { title: 'Google My Business (GMB) — Our Services', description: 'Optimize and manage your Google Business Profile to drive local discovery, map visibility, and store visits.' }
   },
   {
     slug: 'analytics-cro',

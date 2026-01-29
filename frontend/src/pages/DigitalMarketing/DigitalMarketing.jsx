@@ -73,12 +73,12 @@ const DigitalMarketing = () => {
             },
             {
               id: 4,
-              title: 'Social & Community',
-              description: 'Brand-led social strategies and community growth',
-              route: '/digital-marketing/social-community',
-              color: 'green',
-              image: 'linear-gradient(135deg, #00FF88 0%, #00DD77 100%)',
-              icon: '🗣️'
+              title: 'Google My Business (GMB)',
+              description: 'Local SEO & GMB optimization to increase discoverability and local conversions',
+              route: '/digital-marketing/google-my-business',
+              color: 'amber',
+              image: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
+              icon: '📍'
             },
             {
               id: 5,
