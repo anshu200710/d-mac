@@ -14,9 +14,28 @@ const services = [
       'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1200&q=80&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1557800636-894a64c1696f?w=1200&q=80&auto=format&fit=crop'
     ],
-    caseStudies: [
-      { title: 'E-Commerce SEO Lift', image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80&auto=format&fit=crop' }
+
+    examples: [
+      {
+        title: 'GreenMart SEO Revamp',
+        description: 'Technical SEO and content overhaul — boosted organic sessions by 58% in 6 months.',
+        image: 'https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?w=1200&q=80&auto=format&fit=crop',
+        url: 'https://example.com/greenmart'
+      },
+      {
+        title: 'Marketplace Category Optimization',
+        description: 'Category page enhancements that improved rankings and conversion rate.',
+        image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80&auto=format&fit=crop',
+        url: 'https://example.com/marketplace'
+      },
+      {
+        title: 'Local SEO for Healers',
+        description: 'Local citations, GMB optimization, and content — multi-location growth.',
+        image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80&auto=format&fit=crop',
+        url: 'https://example.com/local-seo'
+      }
     ],
+
     meta: { title: 'SEO & Content — Our Services', description: 'SEO and content services that increase organic traffic, authority, and conversions.' }
   },
   {
@@ -33,14 +52,45 @@ const services = [
              'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_145624_bddieb.png',
              'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680031/Screenshot_2026-01-29_145603_eakewj.png'],
 
-    caseStudies: [
-      { title: 'Vyaapaarniti', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_144601_pdejfz.png', url: 'https://vyaapaarniti.com' },
-      { title: 'E-Commerce', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_145533_laoy1y.png', url: 'https://example.com' },
-      { title: 'Site Snapshot', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_145552_cfqsw0.png', url: 'https://example.com' },
-      { title: 'SS Makeover Fairy', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_145624_bddieb.png', url: 'https://ssmakeoverfairy.com/' },
-      { title: 'Healat India', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680031/Screenshot_2026-01-29_145603_eakewj.png', url: 'https://healatindia.com' },
-      { title: 'Ananta Hill', image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680031/Screenshot_2026-01-29_145731_yjyg68.png', url: 'https://anantahill.in/' }
+    examples: [
+      {
+        title: 'VyaapaarNiti',
+        description: 'Technical SEO and content overhaul — boosted organic sessions by 58% in 6 months.',
+        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_144601_pdejfz.png',
+        url: 'https://vyaaparniti.com'
+      },
+      {
+        title: 'Antara Hills',
+        description: 'Category page enhancements that improved rankings and conversion rate.',
+        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680031/Screenshot_2026-01-29_145731_yjyg68.png',
+        url: 'https://anantahill.in/'
+      },
+      {
+        title: 'E-Commerce',
+        description: 'Local citations, GMB optimization, and content — multi-location growth.',
+        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_145533_laoy1y.png',
+        url: 'https://example.com/local-seo'
+      },
+      {
+        title: 'Branding',
+        description: 'Local citations, GMB optimization, and content — multi-location growth.',
+        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_145552_cfqsw0.png',
+        url: 'https://example.com/local-seo'
+      },
+      {
+        title: 'SS Makeover Fairy',
+        description: 'Local citations, GMB optimization, and content — multi-location growth.',
+        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680029/Screenshot_2026-01-29_145624_bddieb.png',
+        url: 'https://ssmakeoverfairy.com/'
+      },
+      {
+        title: 'Healat India',
+        description: 'Local citations, GMB optimization, and content — multi-location growth.',
+        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769680031/Screenshot_2026-01-29_145603_eakewj.png',
+        url: 'https://healatindia.com'
+      }
     ],
+             
 
     meta: { title: 'Web Development — Our Services', description: 'Web development that combines performance, UX, and scalability.' }
   },

@@ -140,18 +140,19 @@ const ServicePage = () => {
           <section className={servicesStyles.gallery}>
             <div className={servicesStyles['service-detail__container']}>
               <h2 className={servicesStyles['service-detail__title']}>Work & Examples</h2>
-              {(service.caseStudies && service.caseStudies.length > 0) ? (
+              {(service.examples && service.examples.length > 0) ? (
                 <div className={servicesStyles.gallery__grid}>
-                  {service.caseStudies.map((cs, i) => (
+                  {service.examples.map((ex, i) => (
                     <figure key={i} className={servicesStyles.gallery__item}>
-                      <a href={cs.url || 'https://example.com'} target="_blank" rel="noopener noreferrer">
+                      <a href={ex.url || 'https://example.com'} target="_blank" rel="noopener noreferrer" className={servicesStyles['gallery__link']}> 
                         <img
-                          src={cs.image}
-                          alt={`${cs.title || service.title} example ${i + 1}`}
+                          src={ex.image}
+                          alt={`${ex.title || service.title} example ${i + 1}`}
                           loading="lazy"
                           decoding="async"
                           onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = 'https://via.placeholder.com/800x450?text=Example'; }}
                         />
+                        {ex.title && <figcaption className={servicesStyles.gallery__overlay}>{ex.title}</figcaption>}
                       </a>
                     </figure>
                   ))}
@@ -170,7 +171,7 @@ const ServicePage = () => {
                     </figure>
                   ))}
                 </div>
-              ))}
+              ))} 
             </div>
           </section>
 

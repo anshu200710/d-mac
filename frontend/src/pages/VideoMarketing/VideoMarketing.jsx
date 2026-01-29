@@ -52,7 +52,7 @@ const VideoMarketing = () => {
       <FloatingImageCards
         sectionTitle="Our Video Marketing Services"
         cardsData={[
-          { id: 1, title: 'Meta Ad Performance', description: 'Short-form paid social ads optimized for Meta platforms', route: '/video-marketing/meta-ad-video', color: 'cyan', image: 'linear-gradient(135deg, #00F5FF 0%, #00D4FF 100%)', icon: '📣' },
+          { id: 1, title: 'Meta Ad Performance', description: 'Short-form paid social ads optimized for Meta platforms', route: '/video-marketing/meta-ad-performance', color: 'cyan', image: 'linear-gradient(135deg, #00F5FF 0%, #00D4FF 100%)', icon: '📣' },
           { id: 2, title: 'BTS', description: 'Behind-the-scenes shoots, candid content and short documentary pieces', route: '/video-marketing/bts', color: 'purple', image: 'linear-gradient(135deg, #A855F7 0%, #9333EA 100%)', icon: '🎥' },
           { id: 3, title: 'Ad Video Shoot', description: 'Full production ad shoots for campaign-quality creative', route: '/video-marketing/ad-video-shoot', color: 'pink', image: 'linear-gradient(135deg, #F472B6 0%, #EC4899 100%)', icon: '🎬' }
         ]}
