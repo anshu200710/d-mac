@@ -148,21 +148,19 @@ const services = [
     bullets: ['Content strategy & calendars', 'Community & reputation management', 'Paid social management', 'Creative repurposing & distribution', 'Performance reporting & insights'],
     examples: [
       {
-        title: 'Social Launch Campaign',
+        title: 'VyaapaarNiti',
         description: 'Product launch content series and community activation across channels.',
-        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769768258/1_dhisre.jpg',
-        url: 'https://example.com/social-launch'
+        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769769082/1_hedcjr.jpg',
       },
       {
-        title: 'Product Teasers',
+        title: 'SS Makeover Fairy',
         description: 'Short-form teasers optimized for reels and story formats to increase pre-orders.',
-        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769768258/2_uea0bz.jpg',
-        url: 'https://example.com/product-teasers'
+        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769769083/3_w7wapp.jpg',
       },
       {
         title: 'Influencer Collab Series',
         description: 'Creator-led collaborations that amplified reach and drove conversions.',
-        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769768258/3_ikljgb.jpg',
+        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769769083/2_bohz4i.jpg',
         url: 'https://example.com/influencer-collab'
       }
     ],

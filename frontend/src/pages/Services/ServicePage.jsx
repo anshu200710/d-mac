@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import servicesStyles from './Services.module.css';
 import styles from './ServicePage.module.css';
 import VideoReels from '../../components/VideoReels/VideoReels';
+import ImageReels from '../../components/VideoReels/ImageReels';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -135,6 +136,9 @@ const ServicePage = () => {
         <div>
           <VideoReels videos={service.videos} />
         </div>
+      ) : service.slug === 'social-media-management' ? (
+        // Social media examples: display as ImageReels to match reel cards style
+        <ImageReels items={service.examples} title="Work & Examples" />
       ) : (
         <>
           <section className={servicesStyles.gallery}>
@@ -143,7 +147,7 @@ const ServicePage = () => {
               {(service.examples && service.examples.length > 0) ? (
                 <div className={servicesStyles.gallery__grid}>
                   {service.examples.map((ex, i) => (
-                    <figure key={i} className={servicesStyles.gallery__item}>
+                    <figure key={i} className={`${servicesStyles.gallery__item} ${service.slug === 'social-media-management' ? servicesStyles.portrait : ''}`}>
                       <a href={ex.url || 'https://example.com'} target="_blank" rel="noopener noreferrer" className={servicesStyles['gallery__link']}> 
                         <img
                           src={ex.image}
@@ -171,14 +175,10 @@ const ServicePage = () => {
                     </figure>
                   ))}
                 </div>
-              ))} 
+              ))}
             </div>
           </section>
-
-
-        </>
-      )}
-
+        </>)}
       <section className={servicesStyles.cta}>
         <div className={servicesStyles.cta__container}>
           <h3 className={servicesStyles.cta__title}>Interested in <span>{service.title}</span>?</h3>
