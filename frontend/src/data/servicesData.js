@@ -161,7 +161,6 @@ const services = [
         title: 'Influencer Collab Series',
         description: 'Creator-led collaborations that amplified reach and drove conversions.',
         image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769769083/2_bohz4i.jpg',
-        url: 'https://example.com/influencer-collab'
       }
     ],
     meta: { title: 'Social Media Management — Our Services', description: 'Social media management and community growth services.' }
