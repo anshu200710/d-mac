@@ -2,6 +2,8 @@ import React from "react";
 import { loginUser, registerUser } from "../api/auth";
 
 const Login = () => {
+  React.useEffect(() => { document.title = 'Login — D-MAC'; }, []);
+
   const [mode, setMode] = React.useState("login");
 
   const [formData, setFormData] = React.useState({

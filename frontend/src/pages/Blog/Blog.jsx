@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Blog.module.css';
 
@@ -18,6 +18,8 @@ const staggerContainer = {
 };
 
 const Blog = () => {
+  useEffect(() => { document.title = 'Blog — D-MAC'; }, []);
+
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
 

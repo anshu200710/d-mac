@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { DigitalMarketingHero, FloatingImageCards } from '../../components/Hero';
 import styles from './DigitalMarketing.module.css';
@@ -16,6 +17,8 @@ const staggerContainer = {
 };
 
 const DigitalMarketing = () => {
+  useEffect(() => { document.title = 'Digital Marketing — D-MAC'; }, []);
+
   return (
     <div className={styles.digitalMarketingPage}>
       <section className={styles.hero}>

@@ -43,16 +43,18 @@ const ServicePage = () => {
   const service = services.find((s) => s.slug === slug);
 
   useEffect(() => {
-    if (service && service.meta?.title) document.title = service.meta.title;
+    if (service) {
+      document.title = service.meta?.title || `${service.title} — D-MAC`;
 
-    if (service && service.meta?.description) {
-      let meta = document.querySelector('meta[name="description"]');
-      if (meta) meta.setAttribute('content', service.meta.description);
-      else {
-        meta = document.createElement('meta');
-        meta.name = 'description';
-        meta.content = service.meta.description;
-        document.head.appendChild(meta);
+      if (service.meta?.description) {
+        let meta = document.querySelector('meta[name="description"]');
+        if (meta) meta.setAttribute('content', service.meta.description);
+        else {
+          meta = document.createElement('meta');
+          meta.name = 'description';
+          meta.content = service.meta.description;
+          document.head.appendChild(meta);
+        }
       }
     }
   }, [service]);

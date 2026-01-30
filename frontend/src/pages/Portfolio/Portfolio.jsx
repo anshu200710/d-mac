@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import styles from './Portfolio.module.css';
@@ -19,6 +19,8 @@ const staggerContainer = {
 };
 
 const Portfolio = () => {
+  React.useEffect(() => { document.title = 'Portfolio — D-MAC'; }, []);
+
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filters = [

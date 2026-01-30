@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ServicesHero } from '../../components/Hero';
@@ -19,6 +20,8 @@ const staggerContainer = {
 };
 
 const Services = () => {
+  useEffect(() => { document.title = 'Services — D-MAC'; }, []);
+
   const digitalMarketingFeatures = [
     'Search Engine Optimization (SEO)',
     'Pay-Per-Click Advertising (PPC)',

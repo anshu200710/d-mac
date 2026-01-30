@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { VideoMarketingHero, FloatingImageCards } from '../../components/Hero';
 import { services } from '../../data/services';
@@ -19,6 +20,8 @@ const staggerContainer = {
 };
 
 const VideoMarketing = () => {
+  useEffect(() => { document.title = 'Video Marketing — D-MAC'; }, []);
+
   return (
     <div className={styles.videoMarketingPage}>
       {/* Hero Section */}

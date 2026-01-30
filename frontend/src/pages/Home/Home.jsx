@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { HomeHero } from '../../components/Hero';
@@ -19,6 +20,8 @@ const staggerContainer = {
 };
 
 const Home = () => {
+  useEffect(() => { document.title = 'Home — D-MAC'; }, []);
+
   const services = [
     {
       icon: (
@@ -49,21 +52,21 @@ const Home = () => {
   const testimonials = [
     {
       quote: "D Mac transformed our digital presence completely. Their strategic approach to marketing delivered a 200% increase in qualified leads within 6 months.",
-      author: "Sarah Johnson",
-      role: "CMO, TechVentures Inc.",
-      initials: "SJ"
+      author: "Pradeep Kumar",
+      role: "",
+      initials: "PK"
     },
     {
       quote: "The video content they produced exceeded all expectations. Professional, engaging, and perfectly aligned with our brand. Highly recommend their services.",
-      author: "Michael Chen",
-      role: "Director of Marketing, GlobalTech",
-      initials: "MC"
+      author: "Sushmita",
+      role: "",
+      initials: "SS"
     },
     {
       quote: "Working with D Mac has been a game-changer for our company. Their team understands enterprise needs and delivers results that matter.",
-      author: "Emily Rodriguez",
-      role: "VP Marketing, Innovate Corp",
-      initials: "ER"
+      author: "Ritwik Kaushal",
+      role: "",
+      initials: "RK"
     }
   ];
 
@@ -98,7 +101,7 @@ const Home = () => {
                   <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </Link>
-              <Link to="/portfolio" className="btn btn--white">
+              <Link to="/web-development" className="btn btn--white">
                 View Our Work
               </Link>
             </motion.div>

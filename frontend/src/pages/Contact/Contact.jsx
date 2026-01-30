@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Contact.module.css';
 
@@ -18,6 +18,8 @@ const staggerContainer = {
 };
 
 const Contact = () => {
+  useEffect(() => { document.title = 'Contact — D-MAC'; }, []);
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
