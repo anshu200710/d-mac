@@ -140,16 +140,35 @@ const services = [
     meta: { title: 'Google My Business (GMB) — Our Services', description: 'Optimize and manage your Google Business Profile to drive local discovery, map visibility, and store visits.' }
   },
   {
-    slug: 'analytics-cro',
-    title: 'Analytics & CRO',
+    slug: 'social-media-management',
+    title: 'Social Media Management',
     category: 'digital',
-    shortDescription: 'Measure, learn and optimize for conversion.',
-    fullDescription: 'We implement analytics and CRO programs to turn data into growth. From experimentation to attribution, we help teams make decisions that move the needle.',
-    bullets: ['Experimentation & A/B testing', 'Analytics setup & measurement', 'Full-funnel attribution'],
-    images: ['https://images.unsplash.com/photo-1517142089942-ba376ce32a2e?w=1200&q=80&auto=format&fit=crop'],
-    caseStudies: [{ title: 'CRO for SaaS', image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1000&q=80&auto=format&fit=crop' }],
-    meta: { title: 'Analytics & CRO — Our Services', description: 'Analytics and CRO that drives measurable improvements.' }
+    shortDescription: 'Manage and grow your brand presence across social platforms.',
+    fullDescription: 'We handle end-to-end social media management: content planning, scheduling, community engagement, creative production, and performance optimization to build audience and drive conversions.',
+    bullets: ['Content strategy & calendars', 'Community & reputation management', 'Paid social management', 'Creative repurposing & distribution', 'Performance reporting & insights'],
+    examples: [
+      {
+        title: 'Social Launch Campaign',
+        description: 'Product launch content series and community activation across channels.',
+        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769768258/1_dhisre.jpg',
+        url: 'https://example.com/social-launch'
+      },
+      {
+        title: 'Product Teasers',
+        description: 'Short-form teasers optimized for reels and story formats to increase pre-orders.',
+        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769768258/2_uea0bz.jpg',
+        url: 'https://example.com/product-teasers'
+      },
+      {
+        title: 'Influencer Collab Series',
+        description: 'Creator-led collaborations that amplified reach and drove conversions.',
+        image: 'https://res.cloudinary.com/dgmovv8me/image/upload/v1769768258/3_ikljgb.jpg',
+        url: 'https://example.com/influencer-collab'
+      }
+    ],
+    meta: { title: 'Social Media Management — Our Services', description: 'Social media management and community growth services.' }
   },
+
   {
     slug: 'meta-ad-performance',
     title: 'Meta Ad Performance',

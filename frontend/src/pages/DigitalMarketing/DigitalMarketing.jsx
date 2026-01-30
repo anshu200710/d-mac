@@ -82,12 +82,12 @@ const DigitalMarketing = () => {
             },
             {
               id: 5,
-              title: 'Analytics & CRO',
-              description: 'Data-driven optimization and full-funnel measurement',
-              route: '/digital-marketing/analytics-cro',
-              color: 'blue',
-              image: 'linear-gradient(135deg, #00D4FF 0%, #0099FF 100%)',
-              icon: '📈'
+              title: 'Social Media Management',
+              description: 'Content strategy, posting, community engagement and growth across platforms',
+              route: '/digital-marketing/social-media-management',
+              color: 'purple',
+              image: 'linear-gradient(135deg, #A855F7 0%, #9333EA 100%)',
+              icon: '📱'
             }
           ]}
         />
