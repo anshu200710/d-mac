@@ -36,13 +36,13 @@ const VideoMarketing = () => {
             variants={staggerContainer}
           >
             <motion.h1 variants={fadeInUp} className={styles.heroTitle}>
-              Video Marketing Excellence
+              Strategic Video Marketing
             </motion.h1>
             <motion.p variants={fadeInUp} className={styles.heroSubtitle}>
-              Tell Your Story with Compelling Video Content
+              Video-first strategies that convert
             </motion.p>
             <motion.p variants={fadeInUp} className={styles.heroDescription}>
-              From concept to production, we create stunning videos that captivate your audience and drive measurable results.
+              From campaign-led ads to behind-the-scenes storytelling, we craft video that grows brands and drives measurable ROI.
             </motion.p>
             <motion.button variants={fadeInUp} className="btn btn--accent">
               Get Started
@@ -55,9 +55,9 @@ const VideoMarketing = () => {
       <FloatingImageCards
         sectionTitle="Our Video Marketing Services"
         cardsData={[
-          { id: 1, title: 'Meta Ad Performance', description: 'Short-form paid social ads optimized for Meta platforms', route: '/video-marketing/meta-ad-performance', color: 'cyan', image: 'linear-gradient(135deg, #00F5FF 0%, #00D4FF 100%)', icon: '📣' },
-          { id: 2, title: 'BTS', description: 'Behind-the-scenes shoots, candid content and short documentary pieces', route: '/video-marketing/bts', color: 'purple', image: 'linear-gradient(135deg, #A855F7 0%, #9333EA 100%)', icon: '🎥' },
-          { id: 3, title: 'Ad Video Shoot', description: 'Full production ad shoots for campaign-quality creative', route: '/video-marketing/ad-video-shoot', color: 'pink', image: 'linear-gradient(135deg, #F472B6 0%, #EC4899 100%)', icon: '🎬' }
+          { id: 1, title: 'Ad Video', description: 'Commercial and campaign-focused videos for brand and product launches', route: '/video-marketing/ad-video', color: 'pink', image: 'linear-gradient(135deg, #F472B6 0%, #EC4899 100%)', icon: '🎬' },
+          { id: 2, title: 'Ad Video Shoot', description: 'Full-production shoots with directors, crews and post-production', route: '/video-marketing/ad-video-shoot', color: 'purple', image: 'linear-gradient(135deg, #A855F7 0%, #9333EA 100%)', icon: '🎥' },
+          { id: 3, title: 'Meta Ad Performance', description: 'Short-form paid social ads optimized for Meta platforms', route: '/video-marketing/meta-ad-performance', color: 'cyan', image: 'linear-gradient(135deg, #00F5FF 0%, #00D4FF 100%)', icon: '📣' }
         ]}
       />
 

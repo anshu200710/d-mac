@@ -167,39 +167,21 @@ const services = [
   },
 
   {
-    slug: 'meta-ad-performance',
-    title: 'Meta Ad Performance',
+    slug: 'ad-video',
+    title: 'Ad Video',
     category: 'video',
-    shortDescription: 'Short-form ad creative tailored for Meta platforms.',
-    fullDescription: 'We produce snackable, high-converting videos optimized for reach, relevance and performance on Meta platforms (Facebook & Instagram). We test formats, hooks and editing styles to maximize ad relevance and ROAS.',
-    bullets: ['Creative testing & adaptation', 'Platform-optimized formats', 'Conversion-focused editing'],
-    images: ['https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1200&q=80&auto=format&fit=crop'],
+    shortDescription: 'Commercial and campaign-focused video production.',
+    fullDescription: 'We create campaign-led commercial videos for brand and product launches — concepting, scriptwriting, and production tailored to your audience and KPIs.',
+    bullets: ['Campaign concept & scripting', 'Director-led production', 'Broadcast & digital deliverables'],
+    images: ['https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80&auto=format&fit=crop'],
     videos: [
-      'https://www.youtube.com/embed/q3lX2p_Uy9I?rel=0',
-      'https://www.youtube.com/embed/KGQPZN46IkQ?rel=0',
-      'https://www.youtube.com/embed/aqz-KE-bpKQ',
-      'https://www.youtube.com/embed/T22NVnTtaAk?rel=0',
-      'https://www.youtube.com/embed/dsio_HBK_uc?rel=0',
-      'https://www.youtube.com/embed/ZtKnUBLCIlE?rel=0'
+      'https://www.youtube.com/embed/Plb5JKo29T0?rel=0',
+      'https://www.youtube.com/embed/m_-MLVXiqKk?rel=0',
+      'https://www.youtube.com/embed/5dzihu5Y_II',
+      'https://www.youtube.com/embed/Ljo30szLjtU?rel=0'
     ],
-    caseStudies: [{ title: 'Meta Ads Lift', image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000&q=80&auto=format&fit=crop' }],
-    meta: { title: 'Meta Ad Video — Our Services', description: 'Meta ad video production focused on performance and reach.' }
-  },
-  {
-    slug: 'bts',
-    title: 'BTS',
-    category: 'video',
-    shortDescription: 'Behind-the-scenes content & candid storytelling.',
-    fullDescription: 'We capture the story behind your brand and production—authentic BTS footage, short-form documentary pieces and creator-led content that builds trust and context.',
-    bullets: ['BTS documentary shorts', 'Creator & set coverage', 'Repurposable social assets'],
-    images: ['https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop'],
-    videos: [
-      'https://www.youtube.com/embed/ScMzIvxBSi4',
-      'https://www.youtube.com/embed/YE7VzlLtp-4',
-      'https://www.youtube.com/embed/nzdw9V2qsSk?rel=0'
-    ],
-    caseStudies: [{ title: 'BTS Series', image: 'https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=1000&q=80&auto=format&fit=crop' }],
-    meta: { title: 'BTS — Our Services', description: 'Behind-the-scenes storytelling that humanizes your brand.' }
+    caseStudies: [{ title: 'Launch Campaign', image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80&auto=format&fit=crop' }],
+    meta: { title: 'Ad Video — Our Services', description: 'Commercial and campaign video production that drives awareness and engagement.' }
   },
   {
     slug: 'ad-video-shoot',
@@ -210,13 +192,40 @@ const services = [
     bullets: ['End-to-end production', 'Director-led shoots', 'Post-production & color grading'],
     images: ['https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80&auto=format&fit=crop'],
     videos: [
-      'https://www.youtube.com/embed/wLN35AebXdY?rel=0',
-      'https://www.youtube.com/embed/3fumBcKC6RE',
-      'https://www.youtube.com/embed/-Y9V1B9f7_c?rel=0'      
+      'https://www.youtube.com/embed/-UavHYaD5v4?rel=0',
+      'https://www.youtube.com/embed/bHg-1asHOnc?rel=0',
+      'https://www.youtube.com/embed/L7uHBT7Ti2o?rel=0',
+      'https://www.youtube.com/embed/f7qGBAcjXgA?rel=0',
+      'https://www.youtube.com/embed/5LuAlyntVRE?rel=0',
+      'https://www.youtube.com/embed/oEdJsve52BA?rel=0',
+      'https://www.youtube.com/embed/1zNS8NNtHas?rel=0',
+      'https://www.youtube.com/embed/Nky2oGalqLk?rel=0'
+
+
     ],
     caseStudies: [{ title: 'Campaign Shoot', image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80&auto=format&fit=crop' }],
     meta: { title: 'Ad Video Shoot — Our Services', description: 'Professional ad video shoots that elevate your campaigns.' }
-  }
+  },
+  {
+    slug: 'meta-ad-performance',
+    title: 'Meta Ad Performance',
+    category: 'video',
+    shortDescription: 'Short-form ad creative tailored for Meta platforms.',
+    fullDescription: 'We produce snackable, high-converting videos optimized for reach, relevance and performance on Meta platforms (Facebook & Instagram). We test formats, hooks and editing styles to maximize ad relevance and ROAS.',
+    bullets: ['Creative testing & adaptation', 'Platform-optimized formats', 'Conversion-focused editing'],
+    images: ['https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1200&q=80&auto=format&fit=crop'],
+    // videos: [
+    //   'https://www.youtube.com/embed/q3lX2p_Uy9I?rel=0',
+    //   'https://www.youtube.com/embed/KGQPZN46IkQ?rel=0',
+    //   'https://www.youtube.com/embed/aqz-KE-bpKQ',
+    //   'https://www.youtube.com/embed/T22NVnTtaAk?rel=0',
+    //   'https://www.youtube.com/embed/dsio_HBK_uc?rel=0',
+    //   'https://www.youtube.com/embed/ZtKnUBLCIlE?rel=0'
+    // ],
+    caseStudies: [{ title: 'Meta Ads Lift', image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000&q=80&auto=format&fit=crop' }],
+    meta: { title: 'Meta Ad Video — Our Services', description: 'Meta ad video production focused on performance and reach.' }
+  },
+
 ];
 
 export default services;
