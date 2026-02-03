@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import styles from './MetaAdPerformancePage.module.css';
+import servicesStyles from './Services.module.css';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -37,52 +38,50 @@ const MetaAdPerformancePage = () => {
     {
       id: 1,
       position: 'left',
-      title: 'Performance Analytics',
-      description: 'Get comprehensive insights into your Meta ad campaigns with detailed performance metrics. We track every important KPI to help you understand what\'s working and where optimization opportunities exist.',
+      title: 'Detailed Targeting in Meta Ads',
+      description: 'Precision targeting is the foundation of successful Meta advertising. We leverage Meta\'s advanced targeting capabilities to reach the exact audience most likely to convert, ensuring every advertising dollar is spent efficiently.',
       points: [
-        'Real-time campaign tracking',
-        'Detailed ROI analysis',
-        'Audience insight dashboards',
-        'Budget allocation optimization'
+        'Maximize relevance and minimize wasted impressions',
+        'Segment audiences by detailed criteria',
+        'Improve ad performance and ROI',
+        'Reduce cost-per-acquisition (CPA)'
       ],
       visual: 'https://placehold.co/800x650'
     },
     {
       id: 2,
       position: 'right',
-      title: 'Creative Optimization',
-      description: 'Our experts test and refine your ad creatives to maximize engagement and conversions. We use A/B testing to identify which variations resonate best with your target audience.',
+      title: 'Core Audiences',
+      description: 'Target users based on explicit criteria that define your ideal customer. Core audiences allow you to build detailed profiles using demographics, interests, behaviors, and location data.',
       points: [
-        'A/B testing frameworks',
-        'Creative performance benchmarks',
-        'Design iteration workflows',
-        'Audience preference analysis'
+        'Demographics: Age, gender, education, job title, relationship status',
+        'Interests: Hobbies, pages liked, topics followed (e.g., fitness, travel)',
+        'Behaviors: Purchase behavior, device usage, travel patterns',
+        'Location: Countries, cities, zip codes, or radius around physical stores'
       ],
       visual: 'https://placehold.co/800x650'
     },
     {
       id: 3,
       position: 'left',
-      title: 'Audience Targeting',
-      description: 'Reach the right people at the right time with laser-focused targeting strategies. We leverage Meta\'s advanced tools to segment audiences and create personalized messaging that drives results.',
+      title: 'Custom Audiences',
+      description: 'Re-engage people who already know your business. Custom audiences help you reconnect with warm leads and existing customers through targeted messaging.',
       points: [
-        'Lookalike audience creation',
-        'Behavioral targeting',
-        'Demographic refinement',
-        'Custom audience segmentation'
+        'Website visitors: Retarget people who visited your site',
+        'Customer lists: Upload emails and phone numbers for direct targeting',
+        'Facebook/Instagram engagement: Target people who engaged with your content, pages, or videos'
       ],
       visual: 'https://placehold.co/800x650'
     },
     {
       id: 4,
       position: 'right',
-      title: 'Conversion Tracking',
-      description: 'Accurately measure and optimize for conversions across all touchpoints. We implement robust tracking systems to ensure you understand exactly where your customers are coming from.',
+      title: 'Lookalike Audiences',
+      description: 'Expand your reach by finding new prospects who share traits and behaviors with your best customers. Lookalike audiences unlock growth by targeting high-intent users at scale.',
       points: [
-        'Pixel implementation & setup',
-        'Multi-touch attribution',
-        'Conversion funnel analysis',
-        'Event tracking optimization'
+        'Create a "source" audience: Use your best customers as the baseline',
+        'Facebook finds similar users: Meta identifies new prospects with matching traits',
+        'Scale acquisition efficiently: Reach qualified prospects who match your ideal profile'
       ],
       visual: 'https://placehold.co/800x650'
     }
@@ -119,6 +118,10 @@ const MetaAdPerformancePage = () => {
           </motion.div>
         </div>
       </section> */}
+
+            <motion.h1 variants={fadeInUp} className={styles.hero__title__ad}>
+             // Meta Ad Performance
+            </motion.h1>
 
       {/* Zigzag Sections */}
       <section className={styles.content}>
@@ -160,26 +163,14 @@ const MetaAdPerformancePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className={styles.cta}>
-        <motion.div
-          className={styles.cta__container}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className={styles.cta__title}>
-            Ready to Transform Your <span>Meta Ads</span>?
-          </h2>
-          <p className={styles.cta__description}>
-            Let's discuss how our Meta ad optimization strategies can drive growth and maximize your advertising ROI.
-          </p>
-          <div className={styles.cta__buttons}>
-            <Link to="/contact" className="btn btn--primary">
-              Schedule a Consultation
-            </Link>
+      <section className={servicesStyles.cta}>
+        <div className={servicesStyles.cta__container}>
+          <h3 className={servicesStyles.cta__title}>Interested in <span>Meta Ad Performance</span>?</h3>
+          <p className={servicesStyles.cta__description}>Let's discuss how this service can help you achieve your goals and drive measurable growth.</p>
+          <div className={servicesStyles.cta__buttons}>
+            <Link to="/contact" className="btn btn--primary">Schedule a Consultation</Link>
           </div>
-        </motion.div>
+        </div>
       </section>
     </main>
   );

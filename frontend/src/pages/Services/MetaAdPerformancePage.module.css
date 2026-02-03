@@ -40,12 +40,14 @@
   margin-bottom: 1rem;
 }
 
-.hero__title {
+.hero__title__ad {
   font-size: 3.5rem;
   font-weight: 800;
-  margin-bottom: 1.5rem;
+  margin-top: 6rem;
   line-height: 1.2;
   letter-spacing: -0.02em;
+  text-align: center;
+  color: #04CDD8;
 }
 
 .hero__description {
@@ -63,7 +65,7 @@
 
 /* Content Section with Zigzag Layout */
 .content {
-  padding: 6rem 1.5rem;
+  padding: 2rem 1.5rem;
   max-width: 1400px;
   margin: 0 auto;
 }
