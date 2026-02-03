@@ -91,7 +91,7 @@ const MetaAdPerformancePage = () => {
   return (
     <main className={styles.main}>
       {/* Hero Section */}
-      <section className={styles.hero}>
+      {/* <section className={styles.hero}>
         <div className={styles.hero__container}>
           <motion.div
             className={styles.hero__content}
@@ -118,7 +118,7 @@ const MetaAdPerformancePage = () => {
             </motion.div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Zigzag Sections */}
       <section className={styles.content}>
