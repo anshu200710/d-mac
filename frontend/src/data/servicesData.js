@@ -200,8 +200,6 @@ const services = [
       'https://www.youtube.com/embed/oEdJsve52BA?rel=0',
       'https://www.youtube.com/embed/1zNS8NNtHas?rel=0',
       'https://www.youtube.com/embed/Nky2oGalqLk?rel=0'
-
-
     ],
     caseStudies: [{ title: 'Campaign Shoot', image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80&auto=format&fit=crop' }],
     meta: { title: 'Ad Video Shoot — Our Services', description: 'Professional ad video shoots that elevate your campaigns.' }
@@ -214,17 +212,9 @@ const services = [
     fullDescription: 'We produce snackable, high-converting videos optimized for reach, relevance and performance on Meta platforms (Facebook & Instagram). We test formats, hooks and editing styles to maximize ad relevance and ROAS.',
     bullets: ['Creative testing & adaptation', 'Platform-optimized formats', 'Conversion-focused editing'],
     images: ['https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1200&q=80&auto=format&fit=crop'],
-    // videos: [
-    //   'https://www.youtube.com/embed/q3lX2p_Uy9I?rel=0',
-    //   'https://www.youtube.com/embed/KGQPZN46IkQ?rel=0',
-    //   'https://www.youtube.com/embed/aqz-KE-bpKQ',
-    //   'https://www.youtube.com/embed/T22NVnTtaAk?rel=0',
-    //   'https://www.youtube.com/embed/dsio_HBK_uc?rel=0',
-    //   'https://www.youtube.com/embed/ZtKnUBLCIlE?rel=0'
-    // ],
-    caseStudies: [{ title: 'Meta Ads Lift', image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1000&q=80&auto=format&fit=crop' }],
-    meta: { title: 'Meta Ad Video — Our Services', description: 'Meta ad video production focused on performance and reach.' }
-  },
+    customPage: true,
+    meta: { title: 'Meta Ad Performance — Our Services', description: 'Meta ad video production focused on performance and reach.' }
+  }
 
 ];
 

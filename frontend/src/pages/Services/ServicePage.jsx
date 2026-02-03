@@ -6,6 +6,7 @@ import servicesStyles from './Services.module.css';
 import styles from './ServicePage.module.css';
 import VideoReels from '../../components/VideoReels/VideoReels';
 import ImageReels from '../../components/VideoReels/ImageReels';
+import MetaAdPerformancePage from './MetaAdPerformancePage';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -69,6 +70,11 @@ const ServicePage = () => {
         </div>
       </main>
     );
+  }
+
+  // Render custom page component for meta-ad-performance
+  if (service.customPage) {
+    return <MetaAdPerformancePage />;
   }
 
   return (

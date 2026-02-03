@@ -12,6 +12,7 @@ import Blog from './pages/Blog';
 import VideoMarketing from './pages/VideoMarketing';
 import DigitalMarketing from './pages/DigitalMarketing/DigitalMarketing';
 import ServicePage from './pages/Services/ServicePage';
+import MetaAdPerformancePage from './pages/Services/MetaAdPerformancePage';
 import './styles/global.css';
 
 const AnimatedRoutes = () => {
@@ -28,6 +29,11 @@ const AnimatedRoutes = () => {
         <Route path="/services" element={
           <PageTransition>
             <Services />
+          </PageTransition>
+        } />
+        <Route path="/meta-ad-performance" element={
+          <PageTransition>
+            <MetaAdPerformancePage />
           </PageTransition>
         } />
         <Route path="/services/:slug" element={
