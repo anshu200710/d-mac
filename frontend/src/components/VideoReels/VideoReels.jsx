@@ -21,7 +21,7 @@ const getYouTubeId = (input) => {
 const toEmbedUrl = (id) => `https://www.youtube.com/embed/${id}?rel=0&showinfo=0&autoplay=1`;
 const posterFor = (id) => `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
 
-const VideoReels = ({ videos = [] }) => {
+const VideoReels = ({ videos = [], title = 'Portfolio' }) => {
   if (!videos || videos.length === 0) return null;
 
   const [loaded, setLoaded] = useState(() => videos.map(() => false));
@@ -37,7 +37,7 @@ const VideoReels = ({ videos = [] }) => {
   return (
     <section className={styles.reels}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Portfolio</h2>
+        <h2 className={styles.title}>{title}</h2>
         <div className={styles.grid}>
           {videos.map((src, i) => {
             const id = getYouTubeId(src);

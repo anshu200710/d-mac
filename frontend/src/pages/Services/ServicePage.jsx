@@ -136,7 +136,10 @@ const ServicePage = () => {
       {service.category === 'video' ? (
         // Video reels work section
         <div>
-          <VideoReels videos={service.videos} />
+          <VideoReels 
+            videos={service.videos}
+            title={service.slug === 'ad-video-shoot' ? 'Video Shoot (BTS)' : 'Portfolio'}
+          />
         </div>
       ) : service.slug === 'social-media-management' ? (
         // Social media examples: display as ImageReels to match reel cards style
