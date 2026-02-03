@@ -796,6 +796,10 @@
     font-size: 2rem;
   }
   
+  .hero__stats {
+    display: none;
+  }
+  
   .hero__buttons {
     flex-direction: column;
   }

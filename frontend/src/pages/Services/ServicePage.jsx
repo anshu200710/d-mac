@@ -72,66 +72,60 @@ const ServicePage = () => {
   }
 
   return (
-    <main className={servicesStyles['services-page']}>      {/* Service detail hero (matches Digital Marketing section style) */}
-      <section id={service.category === 'digital' ? 'digital-marketing' : 'video-marketing'} className={servicesStyles['service-detail']}>
-        <div className={servicesStyles['service-detail__container']}>
-          <motion.div
-            className={servicesStyles['service-detail__grid']}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            <motion.div variants={fadeInUp} className={servicesStyles['service-detail__content']}>
-              <span className={servicesStyles['service-detail__label']}>Service</span>
-              <h2 className={servicesStyles['service-detail__title']}>{service.title}</h2>
-              <p className={servicesStyles['service-detail__description']}>{service.fullDescription}</p>
+    <main className={servicesStyles['services-page']}>
+      {/* Service detail hero (only for digital marketing) */}
+      {service.category === 'digital' && (
+        <section id="digital-marketing" className={servicesStyles['service-detail']}>
+          <div className={servicesStyles['service-detail__container']}>
+            <motion.div
+              className={servicesStyles['service-detail__grid']}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+            >
+              <motion.div variants={fadeInUp} className={servicesStyles['service-detail__content']}>
+                <span className={servicesStyles['service-detail__label']}>Service</span>
+                <h2 className={servicesStyles['service-detail__title']}>{service.title}</h2>
+                <p className={servicesStyles['service-detail__description']}>{service.fullDescription}</p>
 
-              <div className={servicesStyles['service-detail__features']}>
-                {(service.bullets && service.bullets.length ? service.bullets : (service.category === 'digital' ? digitalMarketingFeatures : videoMarketingFeatures)).map((feature, index) => (
-                  <div key={index} className={servicesStyles['service-detail__feature']}>
-                    <div className={servicesStyles['service-detail__feature-icon']}>
-                      <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
-                        <path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/>
-                      </svg>
+                <div className={servicesStyles['service-detail__features']}>
+                  {(service.bullets && service.bullets.length ? service.bullets : (service.category === 'digital' ? digitalMarketingFeatures : videoMarketingFeatures)).map((feature, index) => (
+                    <div key={index} className={servicesStyles['service-detail__feature']}>
+                      <div className={servicesStyles['service-detail__feature-icon']}>
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                          <path d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"/>
+                        </svg>
+                      </div>
+                      <span className={servicesStyles['service-detail__feature-text']}>{feature}</span>
                     </div>
-                    <span className={servicesStyles['service-detail__feature-text']}>{feature}</span>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
 
-              <Link to="/contact" className="btn btn--primary">
-                Get Started
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </Link>
-            </motion.div>
+                <Link to="/contact" className="btn btn--primary">
+                  Get Started
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </Link>
+              </motion.div>
 
-            <motion.div variants={fadeInUp} className={servicesStyles['service-detail__visual']}>
-              <div className={servicesStyles['service-detail__visual-content']}>
-                <div className={servicesStyles['service-detail__visual-icon']}>
-                  {service.category === 'digital' ? (
+              <motion.div variants={fadeInUp} className={servicesStyles['service-detail__visual']}>
+                <div className={servicesStyles['service-detail__visual-content']}>
+                  <div className={servicesStyles['service-detail__visual-icon']}>
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                       <circle cx="12" cy="12" r="10"/>
                       <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                     </svg>
-                  ) : (
-                    <>
-                      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <polygon points="23 7 16 12 23 17 23 7"/>
-                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
-                      </svg>
-                    </>
-                  )}
+                  </div>
+                  <h3 className={servicesStyles['service-detail__visual-title']}>{service.title}</h3>
+                  <p className={servicesStyles['service-detail__visual-subtitle']}>Reach. Engage. Convert.</p>
                 </div>
-                <h3 className={servicesStyles['service-detail__visual-title']}>{service.title}</h3>
-                <p className={servicesStyles['service-detail__visual-subtitle']}>{service.category === 'digital' ? 'Reach. Engage. Convert.' : 'Captivate. Inspire. Connect.'}</p>
-              </div>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
       {service.category === 'video' ? (
         // Video reels work section

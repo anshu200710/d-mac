@@ -133,7 +133,7 @@ const Home = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className={styles.services__label}>Our Services</span>
+          {/* <span className={styles.services__label}>Our Services</span> */}
           <h2 className={styles.services__title}>Comprehensive Digital Solutions</h2>
         </motion.div>
 

@@ -37,7 +37,7 @@ const VideoReels = ({ videos = [] }) => {
   return (
     <section className={styles.reels}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Work</h2>
+        <h2 className={styles.title}>Portfolio</h2>
         <div className={styles.grid}>
           {videos.map((src, i) => {
             const id = getYouTubeId(src);
