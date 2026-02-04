@@ -101,9 +101,12 @@ const Home = () => {
                   <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </Link>
-              <Link to="/web-development" className="btn btn--white">
+              <button 
+                onClick={() => document.getElementById('services-section').scrollIntoView({ behavior: 'smooth' })}
+                className="btn btn--white"
+              >
                 View Our Work
-              </Link>
+              </button>
             </motion.div>
             
             <motion.div variants={fadeInUp} className={styles.hero__stats}>
@@ -125,7 +128,7 @@ const Home = () => {
       </section>
 
       {/* Services Overview Section */}
-      <section className={styles.services}>
+      <section className={styles.services} id="services-section">
         <motion.div
           className={styles.services__header}
           initial={{ opacity: 0, y: 30 }}

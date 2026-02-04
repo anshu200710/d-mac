@@ -35,7 +35,7 @@ const DigitalMarketing = () => {
             <motion.p variants={fadeInUp} className={styles.heroDescription}>
               From SEO and web development to full-funnel growth strategies, we craft campaigns that scale and convert.
             </motion.p>
-            <motion.button variants={fadeInUp} className="btn btn--accent">
+            <motion.button variants={fadeInUp} className="btn btn--accent" onClick={() => window.location.href = '/contact'}>
               Get a Strategy
             </motion.button>
           </motion.div>
@@ -52,9 +52,7 @@ const DigitalMarketing = () => {
               title: 'Web Development',
               description: 'Modern web experiences built for performance, accessibility, and conversion',
               route: '/digital-marketing/web-development',
-              color: 'indigo',
-              image: 'linear-gradient(135deg, #6366F1 0%, #4F46E5 100%)',
-              icon: '💻'
+              image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770190631/4_eqvoz9.svg)',
             },
             {
               id: 2,

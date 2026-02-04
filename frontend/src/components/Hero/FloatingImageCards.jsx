@@ -80,6 +80,7 @@ const FloatingImageCards = ({ cardsData, sectionTitle = 'Our Video Marketing Ser
 
                 <div className={styles.cardContent}>
                   <h3 className={styles.cardTitle}>{card.title}</h3>
+                  <span className={styles.tapText}>Tap to know more</span>
                 </div>
               </Link>
             );
@@ -107,6 +108,7 @@ const FloatingImageCards = ({ cardsData, sectionTitle = 'Our Video Marketing Ser
 
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{card.title}</h3>
+                <span className={styles.tapText}>Tap to know more</span>
               </div>
             </div>
           );

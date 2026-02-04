@@ -24,40 +24,44 @@ const VideoMarketing = () => {
 
   return (
     <div className={styles.videoMarketingPage}>
-      {/* Hero Section */}
-      <section className={styles.hero}>
-        <VideoMarketingHero />
-        
-        <div className={styles.heroContainer}>
-          <motion.div
-            className={styles.heroContent}
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
+      /* Hero Section */}
+        <section className={styles.hero}>
+          <VideoMarketingHero />
+          
+          <div className={styles.heroContainer}>
+            <motion.div
+          className={styles.heroContent}
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer}
+            >
+          <motion.h1 variants={fadeInUp} className={styles.heroTitle}>
+            Strategic Video Marketing
+          </motion.h1>
+          <motion.p variants={fadeInUp} className={styles.heroSubtitle}>
+            Video-first strategies that convert
+          </motion.p>
+          <motion.p variants={fadeInUp} className={styles.heroDescription}>
+            From campaign-led ads to behind-the-scenes storytelling, we craft video that grows brands and drives measurable ROI.
+          </motion.p>
+          <motion.button 
+            variants={fadeInUp} 
+            className="btn btn--accent"
+            onClick={() => window.location.href = '/contact'}
           >
-            <motion.h1 variants={fadeInUp} className={styles.heroTitle}>
-              Strategic Video Marketing
-            </motion.h1>
-            <motion.p variants={fadeInUp} className={styles.heroSubtitle}>
-              Video-first strategies that convert
-            </motion.p>
-            <motion.p variants={fadeInUp} className={styles.heroDescription}>
-              From campaign-led ads to behind-the-scenes storytelling, we craft video that grows brands and drives measurable ROI.
-            </motion.p>
-            <motion.button variants={fadeInUp} className="btn btn--accent">
-              Get Started
-            </motion.button>
-          </motion.div>
-        </div>
-      </section>
+            Get Started
+          </motion.button>
+            </motion.div>
+          </div>
+        </section>
 
-      {/* Floating Image Cards */}
+        {/* Floating Image Cards */}
       <FloatingImageCards
         sectionTitle="Our Video Marketing Services"
         cardsData={[
-          { id: 1, title: 'Ad Video', description: 'Commercial and campaign-focused videos for brand and product launches', route: '/video-marketing/ad-video', color: 'pink', image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770121794/1_ttwbrp.png)' },
-          { id: 2, title: 'Ad Video Shoot', description: 'Full-production shoots with directors, crews and post-production', route: '/video-marketing/ad-video-shoot', color: 'purple', image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770121794/6_rmharf.png)' },
-          { id: 3, title: 'Meta Ad Performance', description: 'Short-form paid social ads optimized for Meta platforms', route: '/video-marketing/meta-ad-performance', color: 'cyan', image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770121794/5_vadng6.png)' }
+          { id: 1, title: 'Ad Video', description: 'Commercial and campaign-focused videos for brand and product launches', route: '/video-marketing/ad-video', image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770186763/1_sobowp.png)' },
+          { id: 2, title: 'Ad Video Shoot', description: 'Full-production shoots with directors, crews and post-production', route: '/video-marketing/ad-video-shoot', image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770186763/2_y1h2xz.png)' },
+          { id: 3, title: 'Meta Ad Performance', description: 'Short-form paid social ads optimized for Meta platforms', route: '/video-marketing/meta-ad-performance', image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770186762/3_rgc0y9.png)' }
         ]}
       />
 
