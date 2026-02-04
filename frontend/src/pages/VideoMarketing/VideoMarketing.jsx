@@ -24,7 +24,7 @@ const VideoMarketing = () => {
 
   return (
     <div className={styles.videoMarketingPage}>
-      /* Hero Section */}
+   
         <section className={styles.hero}>
           <VideoMarketingHero />
           
@@ -59,9 +59,9 @@ const VideoMarketing = () => {
       <FloatingImageCards
         sectionTitle="Our Video Marketing Services"
         cardsData={[
-          { id: 1, title: 'Ad Video', description: 'Commercial and campaign-focused videos for brand and product launches', route: '/video-marketing/ad-video', image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770186763/1_sobowp.png)' },
-          { id: 2, title: 'Ad Video Shoot', description: 'Full-production shoots with directors, crews and post-production', route: '/video-marketing/ad-video-shoot', image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770186763/2_y1h2xz.png)' },
-          { id: 3, title: 'Meta Ad Performance', description: 'Short-form paid social ads optimized for Meta platforms', route: '/video-marketing/meta-ad-performance', image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770186762/3_rgc0y9.png)' }
+          { id: 1, title: 'Ad Video', description: 'Commercial and campaign-focused videos for brand and product launches', route: '/video-marketing/ad-video', image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770198257/1_m4izij.svg)' },
+          { id: 2, title: 'Ad Video Shoot', description: 'Full-production shoots with directors, crews and post-production', route: '/video-marketing/ad-video-shoot', image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770198256/2_vu8l7l.svg)' },
+          { id: 3, title: 'Meta Ad Performance', description: 'Short-form paid social ads optimized for Meta platforms', route: '/video-marketing/meta-ad-performance', image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770198599/3_ctxtxn.png)' }
         ]}
       />
 

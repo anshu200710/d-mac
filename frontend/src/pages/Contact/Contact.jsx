@@ -97,7 +97,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Email Us',
-      content: 'hello@dmac.com\ninfo@dmac.com'
+      content: 'info@d-mac.in'
     }
   ];
 

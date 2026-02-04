@@ -52,7 +52,7 @@ const DigitalMarketing = () => {
               title: 'Web Development',
               description: 'Modern web experiences built for performance, accessibility, and conversion',
               route: '/digital-marketing/web-development',
-              image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770190631/4_eqvoz9.svg)',
+              image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770198397/4_iehjbr.svg)',
             },
             {
               id: 2,
@@ -60,8 +60,7 @@ const DigitalMarketing = () => {
               description: 'Long-term organic growth through targeted content and technical SEO',
               route: '/digital-marketing/seo-content',
               color: 'teal',
-              image: 'linear-gradient(135deg, #00F5FF 0%, #00FF88 100%)',
-              icon: '🔍'
+              image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770198395/5_yll6yz.svg)',
             },
             {
               id: 3,
@@ -69,7 +68,7 @@ const DigitalMarketing = () => {
               description: 'Funnel-focused content that educates, engages, and converts',
               route: '/digital-marketing/content-marketing',
               color: 'pink',
-              image: 'linear-gradient(135deg, #F472B6 0%, #FF7AA8 100%)',
+              image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770198395/6_nvjcfz.svg)',
               icon: '✍️'
             },
             {
@@ -78,7 +77,7 @@ const DigitalMarketing = () => {
               description: 'Local SEO & GMB optimization to increase discoverability and local conversions',
               route: '/digital-marketing/google-my-business',
               color: 'amber',
-              image: 'linear-gradient(135deg, #F59E0B 0%, #F97316 100%)',
+              image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770198404/7_k6ei60.svg)',
               icon: '📍'
             },
             {
@@ -87,7 +86,7 @@ const DigitalMarketing = () => {
               description: 'Content strategy, posting, community engagement and growth across platforms',
               route: '/digital-marketing/social-media-management',
               color: 'purple',
-              image: 'linear-gradient(135deg, #A855F7 0%, #9333EA 100%)',
+              image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770198404/8_mutzvp.svg)',
               icon: '📱'
             }
           ]}
