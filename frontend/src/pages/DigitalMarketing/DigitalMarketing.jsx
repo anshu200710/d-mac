@@ -86,7 +86,7 @@ const DigitalMarketing = () => {
               description: 'Content strategy, posting, community engagement and growth across platforms',
               route: '/digital-marketing/social-media-management',
               color: 'purple',
-              image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770198404/8_mutzvp.svg)',
+              image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770199662/8_h4v7zx.svg)',
               icon: '📱'
             }
           ]}
