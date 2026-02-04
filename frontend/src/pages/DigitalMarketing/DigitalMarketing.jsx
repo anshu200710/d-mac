@@ -69,7 +69,6 @@ const DigitalMarketing = () => {
               route: '/digital-marketing/content-marketing',
               color: 'pink',
               image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770198395/6_nvjcfz.svg)',
-              icon: '✍️'
             },
             {
               id: 4,
@@ -78,7 +77,6 @@ const DigitalMarketing = () => {
               route: '/digital-marketing/google-my-business',
               color: 'amber',
               image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770198404/7_k6ei60.svg)',
-              icon: '📍'
             },
             {
               id: 5,
@@ -87,7 +85,6 @@ const DigitalMarketing = () => {
               route: '/digital-marketing/social-media-management',
               color: 'purple',
               image: 'url(https://res.cloudinary.com/dgmovv8me/image/upload/v1770199662/8_h4v7zx.svg)',
-              icon: '📱'
             }
           ]}
         />
